@@ -1,5 +1,4 @@
-﻿// File: \ViewModels\ChartViewModel.cs
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Panex.Models;
 using Panex.Services;
 using System;
@@ -24,7 +23,6 @@ public partial class ChartViewModel : ObservableObject
     private readonly PeriodicTableService _ptService;
     private Dictionary<string, CurveStyle> _globalCurveStyles = new();
 
-    // A distinct color palette specifically for comparing multiple materials
     private readonly Windows.UI.Color[] _compareColors = new[]
     {
         Microsoft.UI.Colors.Red, Microsoft.UI.Colors.Blue, Microsoft.UI.Colors.Green,
@@ -115,7 +113,6 @@ public partial class ChartViewModel : ObservableObject
         plot.Grid.MinorLineColor = settings.ShowMinorGrid ? (IsDarkMode ? ScottPlot.Colors.White.WithOpacity(0.05) : ScottPlot.Colors.Black.WithOpacity(0.05)) : ScottPlot.Colors.Transparent;
         plot.Grid.MinorLineWidth = settings.ShowMinorGrid ? 1f : 0f;
 
-        // RESTORED: Custom Tick Generators for Log Axes
         if (settings.IsXLog)
         {
             var logTickGenX = new ScottPlot.TickGenerators.NumericManual();
@@ -141,9 +138,8 @@ public partial class ChartViewModel : ObservableObject
         }
         else plot.Axes.Left.TickGenerator = new ScottPlot.TickGenerators.NumericAutomatic();
 
-        plot.Axes.AutoScale(); // Let ScottPlot determine baseline
+        plot.Axes.AutoScale();
 
-        // RESTORED: Original Custom Limits Application & Fallbacks
         if (settings.UseCustomXLimits || settings.UseCustomYLimits)
         {
             var limits = plot.Axes.GetLimits();
@@ -171,7 +167,6 @@ public partial class ChartViewModel : ObservableObject
         }
         else
         {
-            // Existing default logic if no custom limits are turned on
             double rawXMin = minXRaw ?? 0.001;
             double rawXMax = maxXRaw ?? 100_000.0;
             plot.Axes.SetLimitsX(settings.IsXLog ? Math.Log10(rawXMin) : rawXMin, settings.IsXLog ? Math.Log10(rawXMax) : rawXMax);
@@ -409,8 +404,6 @@ public partial class ChartViewModel : ObservableObject
                 if (lac > 0)
                 {
                     validEnergies.Add(e);
-
-                    // Remove the Math.Min clamp
                     mfpList.Add(1.0 / lac);
                     nvlList.Add(logN / lac);
                 }
@@ -603,7 +596,7 @@ public partial class ChartViewModel : ObservableObject
         foreach (var mat in materials)
         {
             double multiplier = multiplierSelector(mat);
-            // Specifically skip linear attenuation tracking for materials without density
+            // Skip linear attenuation for materials without density
             if (multiplier == 0 && settings == LacSettings) continue;
 
             var curve = mat.GetCustomTotalCurve(incPe, incCoh, incInc, incPair, incTrip, incPn);
@@ -666,8 +659,6 @@ public partial class ChartViewModel : ObservableObject
                 if (lac > 0)
                 {
                     validXs.Add(curve.Energies[i]);
-
-                    // Remove the Math.Min clamp
                     validYs.Add(nValue <= 1.0 ? 1.0 / lac : logN / lac);
                 }
             }
@@ -704,7 +695,7 @@ public partial class ChartViewModel : ObservableObject
         {
             if (!useInterpolated)
             {
-                // DIRECT ZEFF: Respects the user's interaction toggles
+                // Direct Zeff respects the selected interaction filters
                 var curve = mat.GetCustomZeffCurve(incPe, incCoh, incInc, incPair, incTrip, incPn);
 
                 if (curve.Energies.Length > 0)
@@ -717,7 +708,7 @@ public partial class ChartViewModel : ObservableObject
             }
             else
             {
-                // INTERPOLATED ZEFF: Uses absolute totals against elemental baseline
+                // Interpolated Zeff compares total cross section against the elemental baseline
                 var energies = mat.GetMasterEnergyGrid();
                 var totalC = mat.GetTotalCrossSectionCurve();
                 var zeffCurve = mat.GetEffectiveAtomicNumberCurve();

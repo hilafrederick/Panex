@@ -1,5 +1,4 @@
-﻿// File: \Services\IPhotoatomicDataService.cs
-using Panex.Models;
+﻿using Panex.Models;
 using System.Collections.Generic;
 
 namespace Panex.Services;

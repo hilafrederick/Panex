@@ -39,6 +39,8 @@ AppId={#AppId}
 AppName={#AppName}
 AppVersion={#AppVersion}
 AppPublisher={#AppPublisher}
+AppPublisherURL=https://github.com/hilafrederick/Panex
+LicenseFile=..\LICENSE
 DefaultDirName={autopf}\{#AppName}
 DefaultGroupName={#AppName}
 OutputDir={#OutputDir}
@@ -50,6 +52,9 @@ ArchitecturesInstallIn64BitMode=x64compatible
 SetupIconFile=..\Panex\Assets\app.ico
 UninstallDisplayIcon={app}\{#AppExeName}
 
+[Messages]
+LicenseLabel=Panex is free, open-source scientific software distributed under the Apache License 2.0.
+
 [Tasks]
 ; Checkbox for creating desktop shortcut (checked by default)
 Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription: "Additional icons:"
@@ -58,8 +63,12 @@ Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription
 ; Primary application executable
 Source: "{#SourcePath}\{#AppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 
+; License and third-party/dataset notices
+Source: "..\LICENSE"; DestDir: "{app}"; Flags: ignoreversion
+Source: "..\NOTICE"; DestDir: "{app}"; Flags: ignoreversion
+
 ; Supporting binaries, libraries, and data folders
-Source: "{#SourcePath}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "{#AppExeName}"
+Source: "{#SourcePath}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs; Excludes: "{#AppExeName},LICENSE,NOTICE"
 
 [Icons]
 ; Start Menu shortcut

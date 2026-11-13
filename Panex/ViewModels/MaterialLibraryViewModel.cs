@@ -1,5 +1,4 @@
-﻿// File: \ViewModels\MaterialLibraryViewModel.cs
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Panex.Models;
 using Panex.Services;
@@ -17,7 +16,6 @@ public partial class MaterialLibraryViewModel : ObservableObject
 
     public event Action<string, string>? ShowAlert;
     public event Func<string, string, string, Task<bool>>? RequestConfirmation;
-    public event EventHandler? MaterialCreated;
 
     [ObservableProperty] private Material? selectedMaterial;
     [ObservableProperty] private Material? selectedLibraryMaterial;
@@ -114,16 +112,13 @@ public partial class MaterialLibraryViewModel : ObservableObject
             target.Category = "My Custom Materials";
             target.Reference = "Material_User";
 
-            // Check if it already exists
             var existing = MaterialLibrary.FirstOrDefault(m => m.Name == target.Name && m.Category == "My Custom Materials");
             if (existing != null)
             {
-                // Ask for permission before obliterating their old material
                 if (RequestConfirmation != null)
                 {
-                    // FIXED: Using 'target' and the Overwrite message
                     bool confirm = await RequestConfirmation.Invoke("Overwrite Material", $"A custom material named '{target.Name}' already exists. Do you want to overwrite it?", "Overwrite");
-                    if (!confirm) return; // User canceled the save
+                    if (!confirm) return;
                 }
 
                 MaterialLibrary.Remove(existing);
@@ -144,11 +139,9 @@ public partial class MaterialLibraryViewModel : ObservableObject
     }
     public void ForceSaveCustomLibrary()
     {
-        // Route to C:\Users\[User]\AppData\Local\Panex\Data\
         string appData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         string userFilePath = System.IO.Path.Combine(appData, "Panex", "Data", "Material_User.json");
 
-        // Ensure the directory exists before attempting to write
         string? directory = System.IO.Path.GetDirectoryName(userFilePath);
         if (!string.IsNullOrEmpty(directory) && !System.IO.Directory.Exists(directory))
         {
@@ -183,12 +176,10 @@ public partial class MaterialLibraryViewModel : ObservableObject
         if (mat == null || mat.Category != "My Custom Materials") return;
         if (RequestConfirmation != null)
         {
-            // FIXED: Using 'mat' and the Delete message
             bool confirm = await RequestConfirmation.Invoke("Delete Custom Material", $"Are you sure you want to permanently delete '{mat.Name}'? This action cannot be undone.", "Delete");
             if (!confirm) return;
         }
 
-        // Don't forget to actually remove the material if confirmed!
         MaterialLibrary.Remove(mat);
         ForceSaveCustomLibrary();
     }

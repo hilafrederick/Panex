@@ -1,5 +1,4 @@
-﻿// File: \Models\Element.cs
-using Panex.ViewModels;
+﻿using Panex.ViewModels;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -18,16 +17,11 @@ public class Element
     public List<CrossSectionCurve> PhotoatomicData { get; set; } = new();
     public List<AbsorptionEdgeRow> AbsorptionEdges { get; set; } = new();
 
-    // =========================================================================
-    // THREAD-SAFE CACHE FIELDS 
-    // =========================================================================
     private readonly object _cacheLock = new();
-
-    // Upgraded to ConcurrentDictionary
     private ConcurrentDictionary<(int C, int S, int X), CrossSectionCurve>? _photoatomicCache;
     private CrossSectionCurve? _elementalPhotonuclearCurve;
 
-    // KEY = Energy in MeV, VALUE = The 5 parameters
+    // Keyed by energy (MeV)
     public Dictionary<double, GpParameters> EbfParameters { get; set; } = new();
     public Dictionary<double, GpParameters> EabfParameters { get; set; } = new();
 
@@ -35,7 +29,6 @@ public class Element
 
     public CrossSectionCurve? GetPhotoatomicCurve(int c, int s, int x = 0)
     {
-        // Double-check locking pattern to safely initialize the dictionary
         if (_photoatomicCache == null)
         {
             lock (_cacheLock)
@@ -66,13 +59,11 @@ public class Element
 
     public CrossSectionCurve GetElementalPhotonuclearCurve()
     {
-        // 1. Thread-Safe Quick Read
         lock (_cacheLock)
         {
             if (_elementalPhotonuclearCurve != null) return _elementalPhotonuclearCurve;
         }
 
-        // 2. Gather all isotopes with data
         var validIsotopes = Isotopes.Where(i => i.PhotonuclearData != null && i.PhotonuclearData.Energies.Length > 0).ToList();
 
         if (validIsotopes.Count == 0)
@@ -85,7 +76,7 @@ public class Element
             }
         }
 
-        // 3. Union all Energy Grids to preserve resolution
+        // Union isotope energy grids to preserve resonance resolution
         var allEnergies = new SortedSet<double>();
         foreach (var iso in validIsotopes)
         {
@@ -95,7 +86,6 @@ public class Element
         double[] unifiedEnergies = allEnergies.ToArray();
         double[] weightedXS = new double[unifiedEnergies.Length];
 
-        // 4. Calculate Weighted Sum at every energy point
         for (int i = 0; i < unifiedEnergies.Length; i++)
         {
             double e = unifiedEnergies[i];
@@ -108,7 +98,6 @@ public class Element
             weightedXS[i] = sum;
         }
 
-        // 5. Thread-Safe Write
         lock (_cacheLock)
         {
             _elementalPhotonuclearCurve ??= new CrossSectionCurve(0, 0, 0, unifiedEnergies, weightedXS);
@@ -118,10 +107,8 @@ public class Element
 
     public double GetTotalCrossSection(double energyMeV)
     {
-        // 1. Photonuclear
         double photonuclear = GetElementalPhotonuclearCurve().Interpolate(energyMeV);
 
-        // 2. Photoatomic
         double photoatomic = 0.0;
         if (PhotoatomicData != null)
         {
@@ -152,7 +139,7 @@ public class Element
         lock (_cacheLock)
         {
             _photoatomicCache = null;
-            _elementalPhotonuclearCurve = null; // Also clear this in case underlying PN data changes
+            _elementalPhotonuclearCurve = null;
         }
     }
 }

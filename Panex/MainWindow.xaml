@@ -144,7 +144,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Modernized TitleBar with Active Database Selector & Theme Toggle -->
+        <!-- Custom TitleBar with Active Database Selector & Theme Toggle -->
         <Grid x:Name="AppTitleBar" Grid.Row="0" Background="Transparent" Loaded="AppTitleBar_Loaded" SizeChanged="AppTitleBar_SizeChanged">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -340,7 +340,7 @@
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
 
-                    <!-- Material Header Card & Surfaced Chart Toolbar -->
+                    <!-- Material Header Card -->
                     <Border Grid.Row="0" Background="{ThemeResource LayerFillColorDefaultBrush}" BorderBrush="{ThemeResource SurfaceStrokeColorDefaultBrush}" BorderThickness="1" Padding="16,12" Margin="0,0,0,8" CornerRadius="8">
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -511,7 +511,7 @@
                             <!-- Right-Aligned Chart Controls Toolbar + Segmented View Switcher -->
                             <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="6" VerticalAlignment="Center">
 
-                                <!-- Surfaced Chart Toolbar (Visible when ShowChart is true) -->
+                                <!-- Chart Toolbar -->
                                 <StackPanel Orientation="Horizontal"
                                             Spacing="4"
                                             VerticalAlignment="Center"

@@ -1,0 +1,70 @@
+Panex
+Copyright 2026 hilafrederick (Panex Development)
+
+The Apache License, Version 2.0 (see LICENSE) applies to the Panex application
+source code, UI, and project configuration created for this repository.
+
+Bundled scientific reference datasets and third-party software libraries
+distributed with Panex remain the property of their respective authors,
+agencies, and copyright holders and are governed by their respective original
+terms, disclaimers, and citation requirements.
+
+================================================================================
+1. BUNDLED NUCLEAR, ATOMIC & MATERIAL REFERENCE DATASETS (Panex/Data/)
+================================================================================
+
+- LLNL EPDL / EPICS2025 (Panex/Data/PA_EPDL_2025/)
+  Evaluated Photon Data Library (epdl_2025_xs.csv,
+  epdl_2025_absorption_edges.csv).
+
+- NIST XCOM (Panex/Data/PA_NIST_XCOM/)
+  Photon Cross Sections Database, Version 3.1 (MDATX3.001-MDATX3.100,
+  ATWTS.DAT, ENB.DAT, HASH1.DAT, HASH2.DAT, INDEX.DAT).
+  M. J. Berger and J. H. Hubbell, National Bureau of Standards / NIST Report
+  NBSIR-87. Subject to NIST and original author terms and disclaimers.
+
+- JENDL-5 Photonuclear Data (Panex/Data/PN_JENDL5/)
+  Japanese Evaluated Nuclear Data Library, JENDL-5 photonuclear
+  photoabsorption cross sections (MT=3), Japan Atomic Energy Agency (JAEA).
+
+- ANSI/ANS-6.4.3 Buildup Factor Parameters (Panex/Data/ANSI_EBF.csv, ANSI_EABF.csv)
+  Geometric Progression (G-P) fitting parameters for exposure buildup factors
+  (EBF) and energy absorption buildup factors (EABF) per ANSI/ANS-6.4.3.
+
+- NIST ESTAR Material Library (Panex/Data/Material_NIST-ESTAR.json)
+  NIST Standard Reference Database 124.
+  https://dx.doi.org/10.18434/T4NC7P
+
+- PNNL Compendium of Material Composition Data (Panex/Data/Material_PNNL-15870-Rev2.json)
+  Detwiler, Rebecca S., et al. "Compendium of Material Composition Data for
+  Radiation Transport Modeling." PNNL-15870 Rev. 2, April 2021.
+  https://doi.org/10.2172/1782721
+
+- Elemental & Isotopic Reference Tables (Panex/Data/Elements.csv, Isotopes.csv)
+  Standard elemental atomic weights and natural isotopic abundances/masses.
+
+================================================================================
+2. THIRD-PARTY LIBRARIES (Panex/Panex.csproj & Runtime Dependencies)
+================================================================================
+
+- CommunityToolkit.Mvvm (8.4.0)
+  MIT License - Copyright (c) .NET Foundation and Contributors
+
+- CommunityToolkit.WinUI.UI.Controls.DataGrid / .Layout / .Primitives (7.1.2)
+  MIT License - Copyright (c) .NET Foundation and Contributors
+
+- Microsoft.Extensions.DependencyInjection (10.0.3)
+  MIT License - Copyright (c) Microsoft Corporation
+
+- ScottPlot & ScottPlot.WinUI (5.1.57)
+  MIT License - Copyright (c) Scott Harden / Harden Technologies, LLC
+
+- SkiaSharp, SkiaSharp.Views.WinUI (3.119.0) & HarfBuzzSharp (8.3.1.1)
+  MIT License - Copyright (c) Microsoft Corporation
+
+- WinUIEx (2.9.0)
+  MIT License - Copyright (c) 2021-2025 Morten Nielsen
+
+- Microsoft.WindowsAppSDK (1.8.260209005), Microsoft.Windows.SDK.BuildTools
+  (10.0.26100.7705), and Microsoft.Web.WebView2 (1.0.3179.45)
+  Microsoft Software License Terms - Copyright (c) Microsoft Corporation

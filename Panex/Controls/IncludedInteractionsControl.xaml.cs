@@ -1,4 +1,3 @@
-// File: \Controls\IncludedInteractionsControl.xaml.cs
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 

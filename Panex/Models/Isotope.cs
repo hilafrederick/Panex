@@ -1,5 +1,4 @@
-﻿// File: \Models\Isotope.cs
-namespace Panex.Models;
+﻿namespace Panex.Models;
 
 public class Isotope
 {
@@ -8,7 +7,7 @@ public class Isotope
     public double Abundance { get; set; }
     public double Mass { get; set; }
 
-    // NEW: Photonuclear Cross Section (JENDL-5)
+    // Photonuclear cross section (JENDL-5)
     public CrossSectionCurve? PhotonuclearData { get; set; }
 
     public double GetPhotonuclearCrossSection(double energyMeV)

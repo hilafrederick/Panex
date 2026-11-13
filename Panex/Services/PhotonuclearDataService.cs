@@ -1,5 +1,4 @@
-﻿// File: \Services\PhotonuclearDataService.cs
-using Panex.Models;
+﻿using Panex.Models;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,7 +15,6 @@ public class PhotonuclearDataService
     {
         if (!Directory.Exists(rootPath)) return;
 
-        // Map for quick lookup: Key = "Z-A" (e.g., "1-2"), Value = Isotope
         var isotopeMap = new Dictionary<string, Isotope>();
         foreach (var el in elements)
         {
@@ -39,7 +37,7 @@ public class PhotonuclearDataService
                 if (isotopeMap.TryGetValue($"{z}-{a}", out Isotope? iso))
                 {
                     var (energies, values) = ReadCsvData(file);
-                    // C=0, S=0, X=0 (Special ID for Photonuclear)
+                    // C=0, S=0, X=0 identifies photonuclear curves
                     iso.PhotonuclearData = new CrossSectionCurve(0, 0, 0, energies, values);
                 }
             }
@@ -51,7 +49,6 @@ public class PhotonuclearDataService
         var eList = new List<double>();
         var vList = new List<double>();
 
-        // Skip header line
         foreach (var line in File.ReadAllLines(filePath).Skip(1))
         {
             if (string.IsNullOrWhiteSpace(line)) continue;

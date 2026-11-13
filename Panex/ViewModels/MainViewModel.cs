@@ -1,4 +1,3 @@
-// File: \ViewModels\MainViewModel.cs
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,7 +6,6 @@ using Panex.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -23,7 +21,6 @@ public partial class MainViewModel : ObservableObject
     public ChartViewModel ChartVM { get; }
     public DataTableViewModel TableVM { get; }
 
-    // Event routing to MainWindow.xaml.cs
     public event EventHandler? RequestRepaint;
     public event Action<string, string>? ShowAlert;
     public event Func<string, string, string, Task<bool>>? RequestConfirmation;
@@ -39,7 +36,6 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty] private bool showGrid = false;
     [ObservableProperty] private bool isMixtureMode = false;
 
-    // NEW: Toggles the chart between Single Material and Multi-Material Comparison
     [ObservableProperty] private bool isCompareMode = false;
 
     public bool IsDarkMode
@@ -64,25 +60,23 @@ public partial class MainViewModel : ObservableObject
 
     partial void OnIsCompareModeChanged(bool value)
     {
-        if (value) // ENTERING COMPARE MODE
+        if (value)
         {
             foreach (var mat in Materials)
             {
                 mat.IsCompared = true;
             }
 
-            // 1. Save the full list to memory before we ruin it
+            // Preserve multi-MFP input while Compare Mode narrows to a single target MFP
             _mfpMemory = TargetMfpInput;
 
-            // 2. Truncate the input to just the first value
             if (TargetMfps.Length > 1)
             {
                 TargetMfpInput = TargetMfps.FirstOrDefault().ToString(System.Globalization.CultureInfo.InvariantCulture);
             }
         }
-        else // EXITING COMPARE MODE
+        else
         {
-            // Restore the full list from memory
             if (!string.IsNullOrWhiteSpace(_mfpMemory))
             {
                 TargetMfpInput = _mfpMemory;
@@ -105,7 +99,6 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty] private int selectedMainTabIndex = 0;
     [ObservableProperty] private bool isBuildupPlotActive = true;
 
-    // Passthrough to ChartVM
     public PlotSettings CrossSectionSettings => ChartVM.CrossSectionSettings;
     public PlotSettings MacSettings => ChartVM.MacSettings;
     public PlotSettings LacSettings => ChartVM.LacSettings;
@@ -146,7 +139,7 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty] private bool showPhotonuclear = true;
     [ObservableProperty] private double nValue = 2.0;
 
-    // NEW: Depth Calculation Filters (Now also used by Compare Mode)
+    // Shared interaction filters for Depth calculations and Compare Mode
     [ObservableProperty] private bool depthIncludePhotoelectric = true;
     [ObservableProperty] private bool depthIncludeCoherent = true;
     [ObservableProperty] private bool depthIncludeIncoherent = true;
@@ -154,7 +147,6 @@ public partial class MainViewModel : ObservableObject
     [ObservableProperty] private bool depthIncludeTriplet = true;
     [ObservableProperty] private bool depthIncludePhotonuclear = true;
 
-    // NEW: Zeff Compare Mode
     [ObservableProperty] private bool compareUseInterpolatedZeff = false;
     partial void OnCompareUseInterpolatedZeffChanged(bool value) { RefreshUIOnly(); }
 
@@ -229,8 +221,6 @@ public partial class MainViewModel : ObservableObject
     private string[] _densityMemories = new string[3] { "", "", "" };
     private string _mfpMemory = "";
 
-    // NEW: Gets all materials currently checked for comparison
-    // Passthrough properties to LibraryVM so XAML bindings remain unbroken
     public ObservableCollection<Material> Materials => LibraryVM.Materials;
     public bool HasMaterials => Materials.Count > 0;
     public IEnumerable<Material> ComparedMaterials => Materials.Where(m => m.IsCompared);
@@ -248,7 +238,6 @@ public partial class MainViewModel : ObservableObject
             LibraryVM.SelectedMaterial = value;
             OnPropertyChanged();
 
-            // NEW: Tell the UI to evaluate the view state whenever a material is clicked or created
             OnPropertyChanged(nameof(ShowMainContent));
             OnPropertyChanged(nameof(ShowEmptyState));
 
@@ -293,7 +282,6 @@ public partial class MainViewModel : ObservableObject
         ? ComparedMaterials.Any(m => BuildupCalc.GetGpParameters(m, 1.0, BuildupFactorType.Exposure) != null)
         : SelectedMaterial != null && BuildupCalc.GetGpParameters(SelectedMaterial, 1.0, BuildupFactorType.Exposure) != null;
 
-    // Library Commands Forwarding
     public IRelayCommand DeleteMaterialCommand => LibraryVM.DeleteMaterialCommand;
     public IRelayCommand SaveMaterialToLibraryCommand => LibraryVM.SaveMaterialToLibraryCommand;
     public IRelayCommand BeginRenameCustomMaterialCommand => LibraryVM.BeginRenameCustomMaterialCommand;
@@ -310,7 +298,6 @@ public partial class MainViewModel : ObservableObject
     {
         if (!IsLoadMode && value >= 0 && value < 3) MaterialDensityInput = _densityMemories[value];
 
-        // ADD THIS: Track if we are on the Mixture tab (Index 2)
         IsMixtureMode = (value == 2);
 
         OnPropertyChanged(nameof(IsCreateMode));
@@ -318,7 +305,6 @@ public partial class MainViewModel : ObservableObject
     }
     partial void OnSelectedLoadTabIndexChanged(int value)
     {
-        // 0 = Standard Library, 1 = Custom Materials
         ShowCustomMaterials = (value == 1);
     }
 
@@ -340,7 +326,6 @@ public partial class MainViewModel : ObservableObject
         {
             MaterialDensityInput = SelectedLibraryMaterial?.Density?.ToString(System.Globalization.CultureInfo.InvariantCulture) ?? "";
 
-            // ADD THIS: Force the table to populate when the Load drawer opens
             UpdatePreviewCompositionTable();
         }
         else if (SelectedInputTabIndex >= 0 && SelectedInputTabIndex < 3)
@@ -362,7 +347,6 @@ public partial class MainViewModel : ObservableObject
     public ObservableCollection<PreviewRow> PreviewCompositionTable { get; } = new();
     public ObservableCollection<CompositionRow> CompositionTable { get; } = new();
 
-    // Data Table Property Forwarding to TableVM
     public ObservableCollection<PhysicsTableRow>? CrossSectionData => TableVM.CrossSectionData;
     public ObservableCollection<ColumnHeader>? CrossSectionHeaders => TableVM.CrossSectionHeaders;
 
@@ -381,7 +365,6 @@ public partial class MainViewModel : ObservableObject
     public ObservableCollection<PhysicsTableRow>? BuildupData => TableVM.BuildupData;
     public ObservableCollection<ColumnHeader>? BuildupHeaders => TableVM.BuildupHeaders;
 
-    // Table Commands Forwarding
     public IRelayCommand CopyTableToClipboardCommand => TableVM.CopyCrossSectionTableCommand;
     public IRelayCommand CopyMacTableToClipboardCommand => TableVM.CopyMacTableCommand;
     public IRelayCommand CopyLacTableToClipboardCommand => TableVM.CopyLacTableCommand;
@@ -391,7 +374,6 @@ public partial class MainViewModel : ObservableObject
 
     public MainViewModel()
     {
-        // Resolve Dependencies from App.Services
         var services = App.Current.Services;
         _ptService = services.GetService<PeriodicTableService>()!;
         BuildupCalc = services.GetService<BuildupCalculator>()!;
@@ -400,12 +382,10 @@ public partial class MainViewModel : ObservableObject
         ChartVM = services.GetService<ChartViewModel>()!;
         TableVM = services.GetService<DataTableViewModel>()!;
 
-        // Wire up sub-ViewModel events to propagate to MainWindow.xaml.cs
         ChartVM.RequestRepaint += (s, e) => RequestRepaint?.Invoke(this, EventArgs.Empty);
         LibraryVM.ShowAlert += (msg, title) => ShowAlert?.Invoke(msg, title);
         LibraryVM.RequestConfirmation += (title, msg, btnText) => RequestConfirmation?.Invoke(title, msg, btnText) ?? Task.FromResult(false);
 
-        // Listen for changes in the LibraryVM so the UI stays dynamically synced
         LibraryVM.PropertyChanged += (s, e) =>
         {
             if (e.PropertyName == nameof(LibraryVM.SelectedLibraryMaterial))
@@ -421,11 +401,9 @@ public partial class MainViewModel : ObservableObject
                     UpdatePreviewCompositionTable();
                 }
             }
-            // Keep the Load Tab index synced with the underlying library filter
             else if (e.PropertyName == nameof(LibraryVM.ShowCustomMaterials))
             {
                 OnPropertyChanged(nameof(ShowCustomMaterials));
-                // If ShowCustomMaterials is true, switch to tab 1. Otherwise, tab 0.
                 SelectedLoadTabIndex = LibraryVM.ShowCustomMaterials ? 1 : 0;
             }
         };
@@ -434,7 +412,6 @@ public partial class MainViewModel : ObservableObject
         {
             OnPropertyChanged(nameof(HasMaterials));
 
-            // If they delete the last material while comparing, turn compare mode off
             if (Materials.Count == 0 && IsCompareMode)
             {
                 IsCompareMode = false;
@@ -444,29 +421,24 @@ public partial class MainViewModel : ObservableObject
 
     public async Task InitializeDataAsync()
     {
-        IsLoading = true; // Show your progress ring
+        IsLoading = true;
 
         await Task.Run(() =>
         {
             string appBase = AppDomain.CurrentDomain.BaseDirectory;
 
-            // This runs on a background thread, reading all the CSVs without freezing the window
             _ptService.LoadData(
                 System.IO.Path.Combine(appBase, "Data", "Isotopes.csv"),
                 System.IO.Path.Combine(appBase, "Data", "Elements.csv")
             );
         });
 
-        // Code below this line automatically returns to the UI thread
-
-        // Setup Initial UI State now that data is loaded
         foreach (var e in _ptService.GetAllElements())
         {
             AvailableElements.Add(e);
             FilteredElements.Add(e);
         }
 
-        // Load material libraries from application and user data folders
         List<string> allLibraryFiles = new List<string>();
 
         string appBasePath = AppDomain.CurrentDomain.BaseDirectory;
@@ -487,14 +459,12 @@ public partial class MainViewModel : ObservableObject
         {
             LibraryVM.LoadLibraries(allLibraryFiles);
         }
-        // Select initial default element and plot settings
-
         SelectedElementInput = AvailableElements.FirstOrDefault(e => e.Symbol == "H");
         CurrentPlotSettings = CrossSectionSettings;
         OnPropertyChanged(nameof(IsCreateMode));
         UpdateMaterialName();
 
-        IsLoading = false; // Hide your progress ring
+        IsLoading = false;
     }
 
     private void ApplyElementFilter()
@@ -560,7 +530,6 @@ public partial class MainViewModel : ObservableObject
             PreviewCompositionTable.Add(new PreviewRow
             {
                 Symbol = kvp.Key.Symbol,
-                // CHANGED: P4 formats as a percentage with 4 decimal places
                 FractionText = kvp.Value.ToString("P4")
             });
         }
@@ -571,7 +540,7 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     private async Task CreateMaterial()
     {
-        await Task.Delay(200); // UI Yield for Drawer Animation
+        await Task.Delay(200); // Yield briefly so the drawer close animation runs smoothly
 
         double? density = null;
         if (!string.IsNullOrWhiteSpace(MaterialDensityInput))
@@ -632,13 +601,11 @@ public partial class MainViewModel : ObservableObject
         RefreshUIOnly();
     }
 
-    // NEW: Command bound to checkboxes in the UI to trigger a chart redraw
     [RelayCommand]
     private void ToggleMaterialCompare()
     {
         if (IsCompareMode)
         {
-            // NEW: Tell the tabs to check if they should hide/show based on the new mix of checked materials
             OnPropertyChanged(nameof(HasValidDensity));
             OnPropertyChanged(nameof(HasBuildupFactors));
 
@@ -709,7 +676,6 @@ public partial class MainViewModel : ObservableObject
 
         var currentMaterial = SelectedMaterial;
 
-        // FIX: Allow refresh to continue if we are in Compare Mode so tables update
         if (currentMaterial == null && !IsCompareMode) { IsLoading = false; RequestRepaint?.Invoke(this, EventArgs.Empty); return; }
 
         IsLoading = true;
@@ -719,7 +685,6 @@ public partial class MainViewModel : ObservableObject
             {
                 if (token.IsCancellationRequested) return;
 
-                // Only do the heavy pre-calc if we have a single material focused
                 if (currentMaterial != null)
                 {
                     currentMaterial.GetTotalCrossSectionCurve();
@@ -734,8 +699,7 @@ public partial class MainViewModel : ObservableObject
 
             if (token.IsCancellationRequested) return;
 
-            // --- NEW PLACEMENT FOR ABSORPTION EDGES ---
-            // Always update the global Absorption Edges flyout, regardless of the active tab
+            // Always update the Absorption Edges flyout regardless of the active tab
             if (IsCompareMode)
             {
                 TableVM.AbsorptionEdgesData = null;
@@ -745,7 +709,6 @@ public partial class MainViewModel : ObservableObject
                 TableVM.UpdateAbsorptionEdgesTable(currentMaterial);
             }
             OnPropertyChanged(nameof(AbsorptionEdgesData));
-            // ------------------------------------------
 
             if (ShowGrid) UpdateTables();
 
@@ -768,21 +731,16 @@ public partial class MainViewModel : ObservableObject
     {
         IsLoading = true;
 
-        // 1. Tell the service to swap the element data
         _ptService.SwitchPhotoatomicLibrary(libraryType);
 
-        // 2. Clear caches on all loaded materials so they are forced to recalculate
         foreach (var mat in Materials) mat.ClearCaches();
         foreach (var mat in MaterialLibrary) mat.ClearCaches();
 
-        // 3. Clear the UI tables
         TableVM.ClearCaches();
 
-        // ADD THIS: Re-evaluate the active material against the new library 
-        // to instantly hide/show the subshell filter button!
+        // Refresh subshell and isotope options for the newly loaded library
         PopulateDetailedOptions();
 
-        // 4. Force the charts and tables to redraw with the new data
         RefreshAll();
     }
 
@@ -850,7 +808,6 @@ public partial class MainViewModel : ObservableObject
     #endregion
 
     #region Plotting & Table Routing Logic
-    // Plotting methods delegate strictly to ChartVM and dynamically branch based on Compare Mode
     public void PlotTo(ScottPlot.Plot plot)
     {
         if (IsCompareMode) ChartVM.PlotCrossSectionComparisonTo(plot, ComparedMaterials, DepthIncludePhotoelectric, DepthIncludeCoherent, DepthIncludeIncoherent, DepthIncludePair, DepthIncludeTriplet, DepthIncludePhotonuclear);
@@ -933,7 +890,6 @@ public partial class MainViewModel : ObservableObject
             TableVM.UpdateBuildupDataTable(SelectedMaterial, TargetMfps, SelectedBuildupType);
         }
 
-        // --- EXISTING DATA NOTIFICATIONS ---
         OnPropertyChanged(nameof(CrossSectionData));
         OnPropertyChanged(nameof(MacData));
         OnPropertyChanged(nameof(LacData));
@@ -941,7 +897,6 @@ public partial class MainViewModel : ObservableObject
         OnPropertyChanged(nameof(ZeffData));
         OnPropertyChanged(nameof(BuildupData));
 
-        // --- HEADER NOTIFICATIONS ---
         OnPropertyChanged(nameof(CrossSectionHeaders));
         OnPropertyChanged(nameof(MacHeaders));
         OnPropertyChanged(nameof(LacHeaders));

@@ -1,5 +1,4 @@
-﻿// File: \Services\PeriodicTableService.cs
-using Panex.Models;
+﻿using Panex.Models;
 using Panex.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -35,20 +34,17 @@ public class MaterialDto
     public string ChemicalFormula { get; set; } = string.Empty;
 }
 
-// Make sure the class is marked partial so the Source Generator can inject the regex code
 public partial class PeriodicTableService
 {
     private Dictionary<int, Element> _elementsByZ = new();
     private Dictionary<string, Element> _elementsBySymbol = new();
 
-    // --- REFACTORED: Hold both services in memory ---
     private readonly PhotoatomicDataService _epdlService;
     private readonly XcomDataService _xcomService;
 
     private PhotonuclearDataService _pnService = new();
     private BuildupDataService _buildupService = new();
 
-    // Track the currently active database
     public string CurrentLibrary { get; private set; } = "EPDL";
 
     public PeriodicTableService(PhotoatomicDataService epdlService, XcomDataService xcomService)
@@ -57,19 +53,16 @@ public partial class PeriodicTableService
         _xcomService = xcomService;
     }
 
-    // --- COMPILED REGEX GENERATORS ---
     [GeneratedRegex(@"^([A-Za-z0-9\.]+)\s+([0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)$", RegexOptions.Compiled)]
     private static partial Regex MixtureLineRegex();
 
     [GeneratedRegex(@"([A-Z][a-z]*)(\d*\.?\d*)", RegexOptions.Compiled)]
     private static partial Regex ElementCountRegex();
-    // ---------------------------------
 
     public IEnumerable<Element> GetAllElements() => _elementsByZ.Values.OrderBy(e => e.Z);
 
     public void LoadData(string isotopesPath, string elementsPath)
     {
-        // 1. Load Elements
         if (File.Exists(elementsPath))
         {
             foreach (var line in File.ReadAllLines(elementsPath).Skip(1))
@@ -89,7 +82,6 @@ public partial class PeriodicTableService
             }
         }
 
-        // 2. Load Isotopes
         if (File.Exists(isotopesPath))
         {
             foreach (var line in File.ReadAllLines(isotopesPath).Skip(1))
@@ -113,17 +105,14 @@ public partial class PeriodicTableService
                 }
             }
 
-            // Recalculate atomic mass based on isotope abundance
             foreach (var element in _elementsByZ.Values)
             {
                 element.RecalculateAtomicMass();
             }
         }
 
-        // 3. Load Data Libraries
         string appBase = AppDomain.CurrentDomain.BaseDirectory;
 
-        // Load the default Photoatomic library on startup (EPDL)
         SwitchPhotoatomicLibrary("EPDL");
 
         // Photonuclear (JENDL-5)
@@ -131,7 +120,7 @@ public partial class PeriodicTableService
         if (Directory.Exists(pnPath))
             _pnService.LoadPhotonuclearData(_elementsByZ.Values, pnPath);
 
-        // Buildup Factors
+        // Buildup factors (ANSI/ANS-6.4.3)
         string ebfPath = Path.Combine(appBase, "Data", "ANSI_EBF.csv");
         string eabfPath = Path.Combine(appBase, "Data", "ANSI_EABF.csv");
         _buildupService.LoadParameters(_elementsByZ.Values, ebfPath, eabfPath);
@@ -145,29 +134,24 @@ public partial class PeriodicTableService
         CurrentLibrary = libraryType;
         string appBase = AppDomain.CurrentDomain.BaseDirectory;
 
-        // 1. Clear old data from elements
         foreach (var el in _elementsByZ.Values)
         {
             el.PhotoatomicData = new List<CrossSectionCurve>();
             el.AbsorptionEdges.Clear();
-
-            // ADD THIS: Force the dictionary to rebuild with the new library
             el.ClearPhotoatomicCache();
         }
 
-        // 2. Load requested cross sections AND edges
         if (libraryType == "XCOM")
         {
             string paPath = Path.Combine(appBase, "Data", "PA_NIST_XCOM");
-            // XcomDataService now automatically populates AbsorptionEdges natively!
             if (Directory.Exists(paPath)) _xcomService.LoadCrossSections(_elementsByZ.Values, paPath);
         }
-        else // Default to EPDL
+        else
         {
             string paPath = Path.Combine(appBase, "Data", "PA_EPDL_2025");
             if (Directory.Exists(paPath)) _epdlService.LoadCrossSections(_elementsByZ.Values, paPath);
 
-            // 3. EPDL requires the external CSV for Absorption Edges
+            // EPDL stores absorption edges in a separate CSV
             string edgesPath = Path.Combine(appBase, "Data", "PA_EPDL_2025", "epdl_2025_absorption_edges.csv");
             if (File.Exists(edgesPath))
             {
@@ -249,7 +233,6 @@ public partial class PeriodicTableService
         return library;
     }
 
-    // --- 1. ELEMENT ENTRY ---
     public Material CreateFromElement(string name, Element element, double? density)
     {
         return new Material
@@ -260,7 +243,6 @@ public partial class PeriodicTableService
         };
     }
 
-    // --- 2. COMPOUND ENTRY ---
     public Material CreateFromCompound(string name, string formula, double? density)
     {
         if (string.IsNullOrWhiteSpace(formula))
@@ -282,7 +264,6 @@ public partial class PeriodicTableService
         };
     }
 
-    // --- 3. MIXTURE ENTRY ---
     public Material CreateFromMixture(string name, string mixtureInput, double? density, bool isWeight)
     {
         var lines = mixtureInput.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
@@ -295,7 +276,6 @@ public partial class PeriodicTableService
             string trimmed = line.Trim();
             if (string.IsNullOrWhiteSpace(trimmed)) continue;
 
-            // Using the GeneratedRegex for performance
             var match = MixtureLineRegex().Match(trimmed);
             if (!match.Success)
                 throw new FormatException($"Invalid syntax in line: '{trimmed}'. Expected 'Formula Value'");
@@ -343,7 +323,6 @@ public partial class PeriodicTableService
         };
     }
 
-    // --- 4. LIBRARY ENTRY ---
     public IEnumerable<Material> LoadMaterialLibrary(string jsonPath)
     {
         var library = new List<Material>();
@@ -385,7 +364,6 @@ public partial class PeriodicTableService
         return library;
     }
 
-    // --- 5. SAVE USER MATERIAL ---
     public void SaveUserMaterial(Material material, string jsonPath)
     {
         var currentLibrary = LoadMaterialLibrary(jsonPath).ToList();
@@ -447,7 +425,6 @@ public partial class PeriodicTableService
         var result = new Dictionary<Element, double>();
         string cleanFormula = formula.Replace("\t", "");
 
-        // Using the GeneratedRegex for performance
         var matches = ElementCountRegex().Matches(cleanFormula);
 
         int matchedLength = 0;

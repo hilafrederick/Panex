@@ -1,5 +1,4 @@
-﻿// File: \Models\BuildupFactorModels.cs
-namespace Panex.Models;
+﻿namespace Panex.Models;
 
 /// <summary>
 /// Defines the type of buildup factor to calculate.

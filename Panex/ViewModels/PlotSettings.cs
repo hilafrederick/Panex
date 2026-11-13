@@ -1,5 +1,4 @@
-﻿// File: \ViewModels\PlotSettings.cs
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.ObjectModel;
@@ -10,7 +9,6 @@ namespace Panex.ViewModels
     {
         private readonly Action _repaint;
 
-        // Baseline defaults to remember for the Reset command
         private readonly bool _defaultIsXLog;
         private readonly bool _defaultIsYLog;
         private bool _defaultShowMinorGrid;
@@ -41,8 +39,7 @@ namespace Panex.ViewModels
             IsYLog = isYLog;
         }
 
-        // Call this immediately after object initialization in MainViewModel 
-        // so it captures the specific minor grid state for that specific plot.
+        // Capture after initialization so Reset restores this plot's minor grid setting
         public void CaptureDefaults()
         {
             _defaultShowMinorGrid = ShowMinorGrid;
@@ -51,24 +48,20 @@ namespace Panex.ViewModels
         [RelayCommand]
         private void ResetToDefaults()
         {
-            // Revert axes and grids to the captured baseline
             IsXLog = _defaultIsXLog;
             IsYLog = _defaultIsYLog;
             ShowMinorGrid = _defaultShowMinorGrid;
             ShowMajorGrid = true;
 
-            // Revert custom axis limits
             UseCustomXLimits = false;
             UseCustomYLimits = false;
 
-            // Revert all active curves (colors, line widths, patterns)
             foreach (var style in CurveStyles)
             {
                 style.ResetToDefaults();
             }
         }
 
-        // Trigger the repaint debounce timer whenever a visual property changes
         partial void OnIsXLogChanged(bool value) => _repaint?.Invoke();
         partial void OnIsYLogChanged(bool value) => _repaint?.Invoke();
         partial void OnShowMajorGridChanged(bool value) => _repaint?.Invoke();

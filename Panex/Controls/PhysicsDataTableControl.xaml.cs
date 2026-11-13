@@ -1,4 +1,3 @@
-// File: \Controls\PhysicsDataTableControl.xaml.cs
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using System.Windows.Input;

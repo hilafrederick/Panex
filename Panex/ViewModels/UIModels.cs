@@ -1,17 +1,14 @@
-﻿// File: \ViewModels\UIModels.cs
-using Microsoft.UI.Xaml.Media;
+﻿using Microsoft.UI.Xaml.Media;
 using System.Collections.Generic;
 
 namespace Panex.ViewModels;
 
-// Replaces the old ColumnDefinitionData for the ListView/ItemsRepeater refactor
 public class ColumnHeader
 {
     public string Title { get; set; } = string.Empty;
-    public double Width { get; set; } = 180; // Fixed width to keep columns aligned
+    public double Width { get; set; } = 180; // Fixed width to keep header and cell columns aligned
 }
 
-// Replaces ExpandoObject to hold the data for the high-performance tables
 public class PhysicsTableRow
 {
     public string Energy { get; set; } = string.Empty;

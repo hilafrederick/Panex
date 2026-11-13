@@ -1,4 +1,3 @@
-// File: \Controls\InteractionFiltersControl.xaml.cs
 using Microsoft.UI.Xaml.Controls;
 
 namespace Panex.Controls

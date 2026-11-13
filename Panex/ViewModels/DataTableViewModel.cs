@@ -1,5 +1,4 @@
-﻿// File: \ViewModels\DataTableViewModel.cs
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Panex.Models;
 using Panex.Services;
@@ -78,13 +77,13 @@ public partial class DataTableViewModel : ObservableObject
         }
 
         var dataList = new ObservableCollection<PhysicsTableRow>();
-        string lastEnergyString = null; // Tracks the previous row's energy
+        string lastEnergyString = null;
 
         foreach (var e in energyGrid)
         {
             string currentEnergyString = e.ToString("G5");
 
-            // Visually deduplicate: If it rounds to the exact same string as the last row, skip it.
+            // Skip rows that format to the same G5 energy string
             if (currentEnergyString == lastEnergyString) continue;
             lastEnergyString = currentEnergyString;
 
@@ -122,13 +121,13 @@ public partial class DataTableViewModel : ObservableObject
         }
 
         var dataList = new ObservableCollection<PhysicsTableRow>();
-        string lastEnergyString = null; // Tracks the previous row's energy
+        string lastEnergyString = null;
 
         foreach (var e in energyGrid)
         {
             string currentEnergyString = e.ToString("G5");
 
-            // Visually deduplicate for the comparison table as well
+            // Skip rows that format to the same G5 energy string
             if (currentEnergyString == lastEnergyString) continue;
             lastEnergyString = currentEnergyString;
 

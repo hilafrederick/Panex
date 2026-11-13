@@ -1,5 +1,4 @@
-﻿// File: \Models\NaturalCubicSpline.cs
-using System;
+﻿using System;
 
 namespace Panex.Models;
 
@@ -73,7 +72,7 @@ public class NaturalCubicSpline
 
     public double Evaluate(double xQuery)
     {
-        // Clamp out-of-bounds queries to prevent floating-point drift crashes
+        // Clamp out-of-bounds queries against floating-point drift
         if (xQuery <= x[0]) return a[0];
         if (xQuery >= x[n - 1]) return a[n - 1];
 
@@ -84,7 +83,6 @@ public class NaturalCubicSpline
 
     private int FindSegment(double xQuery)
     {
-        // Safe binary search for O(log N) lookups
         int low = 0, high = n - 1;
         while (low <= high)
         {
@@ -95,6 +93,6 @@ public class NaturalCubicSpline
             else low = mid + 1;
         }
 
-        return n - 2; // fallback
+        return n - 2;
     }
 }

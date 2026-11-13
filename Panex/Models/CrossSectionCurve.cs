@@ -1,4 +1,3 @@
-// File: \Models\CrossSectionCurve.cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,26 +14,24 @@ public class CrossSectionCurve
     public double[] Energies { get; private set; }
     public double[] CrossSections { get; private set; }
 
-    // Constants for Fortran XCOM 3.1 Pair and Triplet Production Thresholds (in MeV)
+    // Fortran XCOM 3.1 pair and triplet production thresholds (MeV)
     public const double XcomPairThresholdNuclear = 1.022007;   // 1.022007E+06 eV (C=74)
     public const double XcomPairThresholdElectron = 2.044014;  // 2.044014E+06 eV (C=75)
 
-    // Interpolation Caches
     public bool IsXcom { get; private set; }
     private readonly NaturalCubicSpline? _spline;
     private readonly double[]? _logEnergies;
     private readonly double[]? _logCrossSections;
 
-    // True physical boundaries to prevent threshold smearing
+    // Physical boundaries to prevent threshold smearing
     private readonly double _minEnergy;
     private readonly double _maxEnergy;
     private readonly double _firstCrossSection;
     private readonly double _maxCrossSection;
     private readonly double _xcomThreshold = 0.0;
 
-    // STRICT XCOM REPLICATION: Hybrid Photoelectric Math Caches
+    // XCOM hybrid photoelectric piecewise grids below the K-edge
     private readonly List<(double[] LogE, double[] LogXs)>? _xcomPiecewiseGrids;
-    private readonly double _xcomEcut = 0; // The highest absorption edge (K-edge)
 
     public string ReactionName => GetReactionName();
     public string SubshellName => GetSubshellName();
@@ -62,7 +59,6 @@ public class CrossSectionCurve
         _firstCrossSection = CrossSections[0];
         _maxCrossSection = CrossSections[^1];
 
-        // 1. STRICT XCOM REPLICATION (Log-Log Splines, Threshold-Reduced Variables, & Hybrid Photoelectric)
         if (isXcom)
         {
             // Pair Production (74, 75) uses reduced variables splined against (1 - Eth/E)^3 as in Fortran XCOM 3.1
@@ -90,8 +86,7 @@ public class CrossSectionCurve
                 return;
             }
 
-            // Clean data for Log-Log space (prevent Math.Log(0) -Infinity crashes)
-            // GroupBy deduplicates any coincident energies which crash the Spline matrix
+            // Exclude non-positive points before log transform and deduplicate coincident energies that make the spline singular
             var validGeneralPoints = Energies.Zip(CrossSections, (E, Xs) => new { E, Xs })
                                               .Where(p => p.E > 0 && p.Xs > 0)
                                               .GroupBy(p => p.E)
@@ -113,7 +108,6 @@ public class CrossSectionCurve
             _logEnergies = validGeneralPoints.Select(p => Math.Log(p.E)).ToArray();
             _logCrossSections = validGeneralPoints.Select(p => Math.Log(p.Xs)).ToArray();
 
-            // Photoelectric Hybrid Setup
             if (xcomPiecewiseGrids != null && xcomPiecewiseGrids.Count > 0)
             {
                 _xcomPiecewiseGrids = xcomPiecewiseGrids.Select(g => (
@@ -121,11 +115,11 @@ public class CrossSectionCurve
                     g.Xs.Select(x => Math.Log(x)).ToArray()
                 )).ToList();
 
-                _xcomEcut = xcomPiecewiseGrids.Last().E.Last();
+                double xcomEcut = xcomPiecewiseGrids.Last().E.Last(); // Highest absorption edge (K-edge)
 
-                // Use a 1-part-in-a-million tolerance to safely grab the top of the cliff
+                // Tolerance includes the post-edge knot at the top of the K-edge discontinuity
                 var truncatedGrid = Energies.Zip(CrossSections, (E, Xs) => new { E, Xs })
-                                            .Where(p => p.E > 0 && p.Xs > 0 && p.E >= _xcomEcut * 0.999999)
+                                            .Where(p => p.E > 0 && p.Xs > 0 && p.E >= xcomEcut * 0.999999)
                                             .GroupBy(p => Math.Round(p.E, 6))
                                             .Select(g => g.Last())
                                             .ToList();
@@ -139,11 +133,9 @@ public class CrossSectionCurve
             }
             else if (_logEnergies.Length >= 2)
             {
-                // Scattering -> Log-Log Cubic Spline
                 _spline = new NaturalCubicSpline(_logEnergies, _logCrossSections);
             }
         }
-        // 2. STANDARD EPDL / LINEAR-LINEAR (Lin-Lin on raw axes, no log/spline allocation)
     }
 
     public double Interpolate(double energyMeV)
@@ -152,17 +144,15 @@ public class CrossSectionCurve
 
         if (energyMeV < _minEnergy)
         {
-            // Pair Production (74, 75) and Photonuclear (0) have physical thresholds.
+            // Pair Production (74, 75) and Photonuclear (0) have physical thresholds
             if (C == 74 || C == 75 || C == 0) return 0.0;
 
-            // the _minEnergy is a library limitation. Flatline to the boundary value to prevent 0.0 drops!
+            // Clamp non-threshold reactions at _minEnergy to avoid artificial drops to 0.0
             return _firstCrossSection;
         }
 
-        // Flatline at the maximum if requested above the grid
         if (energyMeV >= _maxEnergy) return _maxCrossSection;
 
-        // --- 1. STANDARD EPDL ROUTING (Linear Interpolation on Linear-Linear Axes) ---
         if (!IsXcom)
         {
             return LinearLinear(energyMeV, Energies, CrossSections);
@@ -170,7 +160,6 @@ public class CrossSectionCurve
 
         double targetLogE = Math.Log(energyMeV);
 
-        // --- 2. STRICT XCOM REPLICATION ROUTING (Log-Log Space & Reduced Variables) ---
         if (C == 74 || C == 75)
         {
             if (energyMeV <= _xcomThreshold) return 0.0;
@@ -186,24 +175,22 @@ public class CrossSectionCurve
 
         if (_logEnergies == null || _logEnergies.Length == 0) return 0.0;
 
-        // Photoelectric Hybrid Routing
+        // XCOM photoelectric hybrid: log-log linear below K-edge, cubic spline above
         if (_xcomPiecewiseGrids != null)
         {
             if (targetLogE < _xcomPiecewiseGrids.Last().LogE.Last() - 1e-10)
             {
                 var grid = _xcomPiecewiseGrids.FirstOrDefault(g => targetLogE < g.LogE.Last() - 1e-10);
-                if (grid.LogE == null || grid.LogXs == null) grid = _xcomPiecewiseGrids.Last(); // Fallback
+                if (grid.LogE == null || grid.LogXs == null) grid = _xcomPiecewiseGrids.Last();
 
                 return Math.Exp(LogLogLinear(targetLogE, grid.LogE, grid.LogXs));
             }
             else
             {
-                // Above K-Edge -> Use the truncated Spline
                 return _spline != null ? Math.Exp(_spline.Evaluate(targetLogE)) : 0.0;
             }
         }
 
-        // Scattering -> Log-Log Cubic Spline
         if (_spline != null)
         {
             return Math.Exp(_spline.Evaluate(targetLogE));
@@ -213,7 +200,6 @@ public class CrossSectionCurve
         return Math.Exp(LogLogLinear(targetLogE, _logEnergies, _logCrossSections));
     }
 
-    // Standard Linear-Linear interpolation on raw (E, Xs) scale for EPDL and generic curves
     private static double LinearLinear(double targetE, double[] eGrid, double[] xsGrid)
     {
         if (targetE <= eGrid[0]) return xsGrid[0];
@@ -263,15 +249,14 @@ public class CrossSectionCurve
         return y0 + (targetE - e0) * ((y1 - y0) / (e1 - e0));
     }
 
-    // Extracted log-log linear interpolation logic for XCOM
     private static double LogLogLinear(double targetLogE, double[] logEGrid, double[] logXsGrid)
     {
-        // Clamp boundaries to prevent IndexOutOfRangeException from floating-point drift
+        // Clamp boundaries against floating-point drift
         if (targetLogE <= logEGrid[0]) return logXsGrid[0];
         if (targetLogE >= logEGrid[^1]) return logXsGrid[^1];
 
         int index = Array.BinarySearch(logEGrid, targetLogE);
-        if (index >= 0) return logXsGrid[index]; // Exact match
+        if (index >= 0) return logXsGrid[index];
 
         int nextIndex = ~index;
         int prevIndex = nextIndex - 1;

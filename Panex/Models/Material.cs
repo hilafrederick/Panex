@@ -1,5 +1,4 @@
-﻿// File: \Models\Material.cs
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Concurrent;
 using System.Linq;
@@ -25,10 +24,10 @@ public partial class Material : ObservableObject
 
     public string CompositionString => string.Join(", ", Composition.Select(x => $"{x.Key.Symbol}: {x.Value:P2}"));
 
-    // Calculate Average Atomic Mass (weighted by Atom Fraction)
+    // Atom-fraction-weighted average atomic mass
     public double AverageAtomicMass => Composition.Sum(x => x.Key.AtomicMass * x.Value);
 
-    // Conversion Factor (Barns/Atom -> cm²/g)
+    // Conversion factor (barns/atom -> cm²/g)
     public double MassAttenuationFactor
     {
         get
@@ -49,22 +48,17 @@ public partial class Material : ObservableObject
         return total;
     }
 
-    // =========================================================================
-    // THREAD-SAFE CACHE FIELDS 
-    // =========================================================================
-    private readonly object _cacheLock = new(); // Master lock to prevent struct tearing
+    private readonly object _cacheLock = new();
 
     private double[]? _masterEnergyGridCache;
     private (double[] Energies, double[] CrossSections)? _totalCrossSectionCache;
     private (double[] Energies, double[] CrossSections)? _photonuclearCrossSectionCache;
     private (double[] Energies, double[] ZeffValues)? _zeffCache;
 
-    // Upgraded to ConcurrentDictionary to survive Parallel.For hammering
     private ConcurrentDictionary<(int C, int S), (double[] Energies, double[] CrossSections)> _partialCrossSectionCache = new();
 
     public (double[] Energies, double[] CrossSections) GetCrossSectionCurve(int c, int s, CancellationToken token = default)
     {
-        // 1. Thread-Safe Cache Check
         if (_partialCrossSectionCache.TryGetValue((c, s), out var cached)) return cached;
 
         var allEnergies = new HashSet<double>();
@@ -83,7 +77,6 @@ public partial class Material : ObservableObject
         var sortedEnergies = allEnergies.OrderBy(x => x).ToArray();
         var resultValues = new double[sortedEnergies.Length];
 
-        // Safely pass the cancellation token to the parallel loop
         Parallel.For(0, sortedEnergies.Length, new ParallelOptions { CancellationToken = token }, i =>
         {
             double energy = sortedEnergies[i];
@@ -102,7 +95,7 @@ public partial class Material : ObservableObject
         });
 
         var result = (sortedEnergies, resultValues);
-        _partialCrossSectionCache.TryAdd((c, s), result); // Thread-safe add
+        _partialCrossSectionCache.TryAdd((c, s), result);
         return result;
     }
 
@@ -468,7 +461,7 @@ public partial class Material : ObservableObject
             _totalCrossSectionCache = null;
             _photonuclearCrossSectionCache = null;
             _zeffCache = null;
-            _partialCrossSectionCache.Clear(); // Safe to call on ConcurrentDictionary
+            _partialCrossSectionCache.Clear();
         }
     }
 }

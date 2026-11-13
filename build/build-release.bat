@@ -150,9 +150,11 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command ^
     "Get-ChildItem -Path $staging -Directory | Where-Object { $_.Name -notmatch '^(en-us|en-US)$' -and (Get-ChildItem -Path $_.FullName -Filter '*.mui' -Recurse | Select-Object -First 1) } | ForEach-Object { Write-Host '  Purged satellite folder:' $_.Name; Remove-Item -LiteralPath $_.FullName -Recurse -Force };"
 
 rem -----------------------------------------------------------------------------
-rem Step 4: Create Portable ZIP
+rem Step 4: Stage License Notices & Create Portable ZIP
 rem -----------------------------------------------------------------------------
 echo.
+if exist "%ROOT_DIR%\LICENSE" copy /y "%ROOT_DIR%\LICENSE" "%STAGING_DIR%\LICENSE" >nul
+if exist "%ROOT_DIR%\NOTICE" copy /y "%ROOT_DIR%\NOTICE" "%STAGING_DIR%\NOTICE" >nul
 echo [4/5] Creating portable ZIP package: %ZIP_FILENAME%
 if exist "%DIST_DIR%\%ZIP_FILENAME%" del /f /q "%DIST_DIR%\%ZIP_FILENAME%"
 powershell -NoProfile -ExecutionPolicy Bypass -Command ^

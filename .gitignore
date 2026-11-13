@@ -366,3 +366,7 @@ FodyWeavers.xsd
 /dist/
 dist/
 staging/
+
+# Local tooling, scratch notes, and ad-hoc test artifacts
+Tools/
+test_surface.png

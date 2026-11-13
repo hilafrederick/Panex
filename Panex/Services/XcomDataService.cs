@@ -1,4 +1,3 @@
-// File: \Services\XcomDataService.cs
 using Panex.Models;
 using Panex.ViewModels;
 using System;
@@ -21,7 +20,6 @@ public class XcomDataService : IPhotoatomicDataService
 
             if (File.Exists(filePath))
             {
-                // Pass the element into the parser so it can attach the absorption edges
                 element.PhotoatomicData = ParseMdatx3(filePath, element);
             }
         }
@@ -39,7 +37,7 @@ public class XcomDataService : IPhotoatomicDataService
         int maxEdg = int.Parse(tokens[cursor++]);
         int maxE = int.Parse(tokens[cursor++]);
 
-        // NEW: Parse the explicitly defined Absorption Edges right out of the XCOM file!
+        // Parse absorption edges from the MDATX3 header
         if (maxEdg > 0)
         {
             cursor += maxEdg; // Skip IDG indices (internal Fortran array pointers)
@@ -61,7 +59,6 @@ public class XcomDataService : IPhotoatomicDataService
             }
         }
 
-        // Extract the main interaction arrays
         double[] energies_eV = ExtractArray(tokens, ref cursor, maxE);
         double[] coherent = ExtractArray(tokens, ref cursor, maxE);
         double[] incoherent = ExtractArray(tokens, ref cursor, maxE);
@@ -71,7 +68,7 @@ public class XcomDataService : IPhotoatomicDataService
 
         double[] energies_MeV = energies_eV.Select(e => e * 1.0e-6).ToArray();
 
-        // Gather the trailing Piecewise Grids used for Photoelectric hybrid interpolation
+        // Trailing piecewise grids used for XCOM photoelectric hybrid interpolation
         var piecewiseGrids = new List<(double[] E, double[] Xs)>();
         if (cursor < tokens.Length)
         {
@@ -83,8 +80,7 @@ public class XcomDataService : IPhotoatomicDataService
             double[][] pEnergies = new double[lax][];
             for (int l = 0; l < lax; l++)
             {
-                // THE FIX: These piecewise energies are ALREADY in MeV! 
-                // Do NOT multiply by 1.0e-6!
+                // Piecewise grid energies in MDATX3 are already in MeV (unlike the main grid in eV).
                 pEnergies[l] = ExtractArray(tokens, ref cursor, kmx[l]);
             }
 

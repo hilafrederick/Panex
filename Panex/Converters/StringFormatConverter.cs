@@ -1,5 +1,4 @@
-﻿// File: \Converters\StringFormatConverter.cs
-using Microsoft.UI.Xaml.Data;
+﻿using Microsoft.UI.Xaml.Data;
 using System;
 
 namespace Panex.Converters

@@ -1,5 +1,4 @@
-﻿// File: \Models\PhysicsConstants.cs
-using System;
+﻿using System;
 
 namespace Panex.Models;
 

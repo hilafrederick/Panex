@@ -1,5 +1,3 @@
-// File: \MainWindow.xaml.cs
-using CommunityToolkit.WinUI.UI.Controls;
 using Microsoft.UI.Input;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
@@ -24,7 +22,6 @@ namespace Panex
         private double _drawerWidth = 820;
         public MainViewModel ViewModel { get; }
 
-        // Class-level fields
         private Microsoft.UI.Dispatching.DispatcherQueueTimer _repaintTimer;
         private bool _isHoverGlobalEnabled = false;
         private Dictionary<ScottPlot.WinUI.WinUIPlot, ScottPlot.Plottables.VerticalLine> _plotCrosshairs = new();
@@ -34,39 +31,35 @@ namespace Panex
         {
             this.InitializeComponent();
 
-            // 1. Clean, native AppWindow sizing using WinUIEx
             this.SetWindowSize(1366, 768);
             this.MinWidth = 1280;
             this.MinHeight = 720;
             this.CenterOnScreen();
 
-            // Set Window and Taskbar Icon
             var iconPath = System.IO.Path.Combine(System.AppContext.BaseDirectory, "Assets", "app.ico");
             if (System.IO.File.Exists(iconPath))
             {
                 this.AppWindow.SetIcon(iconPath);
             }
 
-            // Set TitleBar Icon for unpackaged execution
+            // Set TitleBar icon explicitly for unpackaged execution
             var logoPath = System.IO.Path.Combine(System.AppContext.BaseDirectory, "Assets", "logo.png");
             if (System.IO.File.Exists(logoPath) && TitleBarIcon != null)
             {
                 TitleBarIcon.Source = new Microsoft.UI.Xaml.Media.Imaging.BitmapImage(new Uri(logoPath));
             }
 
-            // 2. Style TitleBar & Caption Buttons
             ConfigureTitleBar();
 
-            // 3. Initialize the Debounce Timer for Chart Rendering
+            // ~30 FPS debounce timer for chart rendering
             _repaintTimer = this.DispatcherQueue.CreateTimer();
-            _repaintTimer.Interval = TimeSpan.FromMilliseconds(30); // Restricts updates to ~30 FPS
+            _repaintTimer.Interval = TimeSpan.FromMilliseconds(30);
             _repaintTimer.Tick += (s, e) =>
             {
-                _repaintTimer.Stop(); // Stop timer so it only fires once per burst
-                UpdatePlots();        // Render the active chart
+                _repaintTimer.Stop();
+                UpdatePlots();
             };
 
-            // 4. VIEWMODEL SUBSCRIPTIONS
             ViewModel = (MainViewModel)RootGrid.DataContext;
 
             LoadThemePreference();
@@ -76,7 +69,6 @@ namespace Panex
                 await ViewModel.InitializeDataAsync();
             };
 
-            // Debounce the Repaint Request
             ViewModel.RequestRepaint += (s, e) =>
             {
                 _repaintTimer.Stop();
@@ -96,15 +88,13 @@ namespace Panex
                         ? ListViewSelectionMode.None
                         : ListViewSelectionMode.Single;
 
-                    // Cancel the deferred timer and swap the plot data immediately
-                    // so the plot doesn't redraw the old partial curves during its resize pass.
+                    // Cancel the deferred timer and swap plot data immediately
+                    // so the plot doesn't redraw stale curves during its resize pass.
                     _repaintTimer.Stop();
                     UpdatePlots();
                 }
             };
         }
-
-        // --- TITLE BAR STYLING & DRAG REGION METHODS ---
 
         private void ConfigureTitleBar()
         {
@@ -209,8 +199,6 @@ namespace Panex
                 }
             }
         }
-
-        // --- INTERACTION & DRAWER METHODS ---
 
         private void RootGrid_KeyDown(object sender, KeyRoutedEventArgs e)
         {
@@ -342,8 +330,6 @@ namespace Panex
             }
         }
 
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e) => UpdatePlots();
-
         private async void OnTabChanged(object sender, SelectionChangedEventArgs e)
         {
             bool isTabChange = e.AddedItems.FirstOrDefault() is TabViewItem ||
@@ -353,7 +339,7 @@ namespace Panex
 
             HoverTooltip.Visibility = Microsoft.UI.Xaml.Visibility.Collapsed;
 
-            // 1. Hide all plots instantly to prevent ghosting of stale data
+            // Hide all plots while swapping tabs to prevent ghosting of stale data
             CrossSectionPlot.Opacity = 0;
             MacPlot.Opacity = 0;
             LacPlot.Opacity = 0;
@@ -367,7 +353,6 @@ namespace Panex
             UpdatePlots();
             ViewModel.UpdateTablesCommand.Execute(null);
 
-            // 2. Restore visibility now that the fresh frame is ready
             CrossSectionPlot.Opacity = 1;
             MacPlot.Opacity = 1;
             LacPlot.Opacity = 1;
@@ -537,11 +522,10 @@ namespace Panex
                 double closestX = targetX;
                 var refCurve = curves[0];
 
-                // 1. O(log N) Binary Search for the closest X coordinate
                 int index = Array.BinarySearch(refCurve.Xs, targetX);
                 if (index < 0)
                 {
-                    index = ~index; // Bitwise complement gets the index of the first larger element
+                    index = ~index;
                     if (index == 0) closestX = refCurve.Xs[0];
                     else if (index >= refCurve.Xs.Length) closestX = refCurve.Xs[refCurve.Xs.Length - 1];
                     else
@@ -559,10 +543,9 @@ namespace Panex
                 var hoverData = new List<HoverItem>();
                 foreach (var curve in curves)
                 {
-                    // 2. O(log N) Binary Search to find the exact Y value for the closest X on THIS curve
                     int curveIndex = Array.BinarySearch(curve.Xs, closestX);
 
-                    // Fallback in case floating point precision causes a miss, find the nearest
+                    // Fallback to nearest point if floating-point drift misses an exact match
                     if (curveIndex < 0)
                     {
                         curveIndex = ~curveIndex;
@@ -592,7 +575,6 @@ namespace Panex
                 HoverItems.ItemsSource = hoverData;
                 HoverTooltip.Visibility = Microsoft.UI.Xaml.Visibility.Visible;
 
-                // Get coordinates relative to the absolute RootGrid
                 var relativePos = e.GetCurrentPoint(RootGrid).Position;
 
                 HoverTooltip.UpdateLayout();
@@ -693,8 +675,6 @@ namespace Panex
             return await tcs.Task;
         }
 
-        private void MenuExit_Click(object sender, RoutedEventArgs e) => Application.Current.Exit();
-
         private void ThemeToggle_Click(object sender, RoutedEventArgs e)
         {
             if (ViewModel.IsDarkMode)
@@ -724,8 +704,6 @@ namespace Panex
             UpdateAllPlots();
             SaveThemePreference("Dark");
         }
-
-        // --- THEME SAVING METHODS ---
 
         private readonly string _themeFilePath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Panex", "theme.txt");
 

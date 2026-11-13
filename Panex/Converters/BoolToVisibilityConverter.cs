@@ -1,5 +1,4 @@
-﻿// File: \Converters\BoolToVisibilityConverter.cs
-using Microsoft.UI.Xaml;
+﻿using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Data;
 using System;
 
