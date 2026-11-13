@@ -1,0 +1,3112 @@
+{
+  "Metadata": {
+    "DocumentCode": "PNNL-15870-Rev2",
+    "Citation": "Detwiler, Rebecca S., et al. \"Compendium of Material Composition Data for Radiation Transport Modeling.\" Apr. 2021. https://doi.org/10.2172/1782721"
+  },
+  "Materials": [
+    {
+      "Name": "A-150 Tissue-Equivalent Plastic",
+      "Composition": "H 0.58363; C 0.374869; N 0.014531; O 0.018984; F 0.005324; Ca 0.002662",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.127
+    },
+    {
+      "Name": "Acetone",
+      "Composition": "H 0.6; C 0.3; O 0.1",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.7899,
+      "Chemical Formula": "C3H6O"
+    },
+    {
+      "Name": "Acetylene",
+      "Composition": "H 0.500001; C 0.5",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.0010967,
+      "Chemical Formula": "C2H2"
+    },
+    {
+      "Name": "Air (dry, near sea level)",
+      "Composition": "C 0.00015; N 0.784429; O 0.21075; Ar 0.004671",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.001205
+    },
+    {
+      "Name": "Alanine",
+      "Composition": "H 0.53844; C 0.230784; N 0.076925; O 0.15385",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.42
+    },
+    {
+      "Name": "Aluminum",
+      "Composition": "Al 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 2.6989,
+      "Chemical Formula": "Al"
+    },
+    {
+      "Name": "Aluminum Oxide",
+      "Composition": "O 0.6; Al 0.4",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 3.97,
+      "Chemical Formula": "Al2O3"
+    },
+    {
+      "Name": "Aluminum, alloy 2024-O",
+      "Composition": "Mg 0.017157; Al 0.955162; Si 0.002804; Ti 0.000494; Cr 0.000303; Mn 0.003036; Fe 0.00141; Cu 0.019031; Zn 0.000603",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.78
+    },
+    {
+      "Name": "Aluminum, alloy 2090-T83",
+      "Composition": "Li 0.083228; Mg 0.001729; Al 0.90171; Si 0.000598; Ti 0.000527; Cr 0.000162; Mn 0.000153; Fe 0.000361; Cu 0.010951; Zn 0.000257; Zr 0.000324",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.59
+    },
+    {
+      "Name": "Aluminum, alloy 3003",
+      "Composition": "Al 0.987924; Si 0.003221; Mn 0.006198; Fe 0.00189; Cu 0.000536; Zn 0.000231",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.73
+    },
+    {
+      "Name": "Aluminum, alloy 4043-O",
+      "Composition": "Be 1.5e-05; Mg 0.000316; Al 0.944964; Si 0.050758; Ti 0.000643; Mn 0.00014; Fe 0.002203; Cu 0.000726; Zn 0.000235",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.69
+    },
+    {
+      "Name": "Aluminum, alloy 5086-O",
+      "Composition": "Mg 0.044472; Al 0.947942; Si 0.002062; Ti 0.000454; Cr 0.00078; Mn 0.002213; Fe 0.001296; Cu 0.000228; Zn 0.000553",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.66
+    },
+    {
+      "Name": "Aluminum, alloy 6061-O",
+      "Composition": "Mg 0.011162; Al 0.97733; Si 0.005796; Ti 0.000496; Cr 0.001017; Mn 0.000433; Fe 0.001986; Cu 0.001174; Zn 0.000606",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.7
+    },
+    {
+      "Name": "Aluminum, alloy 7075-O",
+      "Composition": "Mg 0.029013; Al 0.933052; Si 0.002353; Ti 0.00069; Cr 0.001248; Mn 0.000902; Fe 0.001479; Cu 0.007102; Zn 0.024161",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.81
+    },
+    {
+      "Name": "Ammonia (liquid at T= -79 C)",
+      "Composition": "H 0.75; N 0.25",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.771,
+      "Chemical Formula": "NH3"
+    },
+    {
+      "Name": "Anthracene",
+      "Composition": "H 0.416667; C 0.583333",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 1.28,
+      "Chemical Formula": "C14H10"
+    },
+    {
+      "Name": "Argon",
+      "Composition": "Ar 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.001662,
+      "Chemical Formula": "Ar"
+    },
+    {
+      "Name": "Asbestos (Chrysotile)",
+      "Composition": "H 0.222223; O 0.5; Mg 0.166667; Si 0.111111",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.53,
+      "Chemical Formula": "Mg3Si2O9H4"
+    },
+    {
+      "Name": "Asphalt",
+      "Composition": "H 0.586744; C 0.402599; N 0.002463; O 0.001444; S 0.006703; V 4.4e-05; Ni 3e-06",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 1.3
+    },
+    {
+      "Name": "Asphalt pavement",
+      "Composition": "H 0.129089; C 0.153985; N 0.000449; O 0.459407; Na 0.00991; Mg 0.022142; Al 0.035271; Si 0.12081; P 0.000251; S 0.005816; K 0.007091; Ca 0.044214; Ti 0.001238; V 8e-06; Mn 0.000135; Fe 0.010184; Ni 1e-06",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.5784
+    },
+    {
+      "Name": "Bakelite",
+      "Composition": "H 0.431804; C 0.488651; O 0.079545",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.25
+    },
+    {
+      "Name": "Barium Fluoride",
+      "Composition": "F 0.666667; Ba 0.333333",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.89,
+      "Chemical Formula": "BaF2"
+    },
+    {
+      "Name": "Barium sulfate",
+      "Composition": "O 0.666666; S 0.166667; Ba 0.166667",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 4.5,
+      "Chemical Formula": "BaSO4"
+    },
+    {
+      "Name": "Benzene",
+      "Composition": "H 0.500001; C 0.5",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.8786,
+      "Chemical Formula": "C6H6"
+    },
+    {
+      "Name": "Beryllium",
+      "Composition": "Be 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 1.848,
+      "Chemical Formula": "Be"
+    },
+    {
+      "Name": "Beryllium Carbide",
+      "Composition": "Be 0.666667; C 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 1.9,
+      "Chemical Formula": "Be2C"
+    },
+    {
+      "Name": "Beryllium Oxide",
+      "Composition": "Be 0.5; O 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 3.01,
+      "Chemical Formula": "BeO"
+    },
+    {
+      "Name": "Bismuth",
+      "Composition": "Bi 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 9.747,
+      "Chemical Formula": "Bi"
+    },
+    {
+      "Name": "Bismuth Germanate (BGO)",
+      "Composition": "O 0.631579; Ge 0.157895; Bi 0.210526",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 7.13,
+      "Chemical Formula": "Bi4Ge3O12"
+    },
+    {
+      "Name": "Bismuth Iodide",
+      "Composition": "I 0.75; Bi 0.25",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 5.778,
+      "Chemical Formula": "BiI3"
+    },
+    {
+      "Name": "Blood (ICRP)",
+      "Composition": "H 0.634596; C 0.052293; N 0.013287; O 0.298052; Na 0.000505; Mg 1e-05; Si 7e-06; P 7.1e-05; S 0.000362; Cl 0.000492; K 0.000262; Ca 9e-06; Fe 5.2e-05; Zn 1e-06",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.06
+    },
+    {
+      "Name": "Bone Equivalent Plastic, B-100",
+      "Composition": "H 5.9e-05; C 0.353638; N 0.012142; O 0.015864; F 0.069704; Ca 0.034854",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.45
+    },
+    {
+      "Name": "Bone Equivalent Plastic, B-110",
+      "Composition": "H 0.386395; C 0.335513; N 0.031096; O 0.031064; F 0.143965; Ca 0.071968",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.785
+    },
+    {
+      "Name": "Bone, Compact (ICRU)",
+      "Composition": "H 0.527877; C 0.192482; N 0.01603; O 0.213112; Mg 0.000684; P 0.018794; S 0.000519; Ca 0.030502",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.85
+    },
+    {
+      "Name": "Bone, Cortical (ICRP)",
+      "Composition": "H 0.47538; C 0.121907; N 0.030412; O 0.282853; Mg 0.000918; P 0.03438; S 0.000997; Ca 0.053138; Zn 1.6e-05",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.85
+    },
+    {
+      "Name": "Boral (65% Al-35% B4C)",
+      "Composition": "B 0.454449; C 0.113488; Al 0.432063",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.53
+    },
+    {
+      "Name": "Boral (Aluminum 10% boron alloy)",
+      "Composition": "B 0.217839; Na 0.005123; Al 0.767405; Si 0.002097; K 0.006025; Ti 0.000246; Fe 0.001265",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.6
+    },
+    {
+      "Name": "Boral (Aluminum 5% boron alloy)",
+      "Composition": "B 0.116664; Na 0.005487; Al 0.86798; Si 0.001797; K 0.006453; Ti 0.000264; Fe 0.001355",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 2.6
+    },
+    {
+      "Name": "Borax",
+      "Composition": "Na 0.046512; B 0.093024; O 0.395348; H 0.465116",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 1.73,
+      "Chemical Formula": "Na2B4O17H20"
+    },
+    {
+      "Name": "Boric Acid",
+      "Composition": "H 0.428571; B 0.142858; O 0.428572",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 1.5,
+      "Chemical Formula": "BO3H3"
+    },
+    {
+      "Name": "Boron",
+      "Composition": "B 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 2.37,
+      "Chemical Formula": "B"
+    },
+    {
+      "Name": "Boron Carbide",
+      "Composition": "B 0.8; C 0.2",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.52,
+      "Chemical Formula": "B4C"
+    },
+    {
+      "Name": "Boron Fluoride (B2F4)",
+      "Composition": "B 0.333333; F 0.666667",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.004058,
+      "Chemical Formula": "B2F4"
+    },
+    {
+      "Name": "Boron Fluoride (BF3)",
+      "Composition": "B 0.25; F 0.75",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.002831,
+      "Chemical Formula": "BF3"
+    },
+    {
+      "Name": "Boron Oxide",
+      "Composition": "B 0.4; O 0.6",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 1.812,
+      "Chemical Formula": "B2O3"
+    },
+    {
+      "Name": "Brain (ICRP)",
+      "Composition": "H 0.654704; C 0.06227; N 0.005654; O 0.274958; Na 0.000477; Mg 3.7e-05; P 0.000682; S 0.000329; Cl 0.000397; K 0.000473; Ca 1.3e-05; Fe 5e-06; Zn 1e-06",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.03
+    },
+    {
+      "Name": "Brass (typical composition)",
+      "Composition": "Fe 0.000992; Cu 0.668462; Zn 0.318026; Sn 0.001437; P 0.011083",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.07
+    },
+    {
+      "Name": "Brick, Common Silica",
+      "Composition": "O 0.663427; Al 0.003747; Si 0.323229; Ca 0.007063; Fe 0.002534",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 1.8
+    },
+    {
+      "Name": "Brick, Fire",
+      "Composition": "O 0.636334; Mg 0.005057; Al 0.160954; Si 0.183806; Ca 0.003578; Ti 0.005135; Fe 0.005135",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.1
+    },
+    {
+      "Name": "Brick, Kaolin (white)",
+      "Composition": "O 0.635743; Mg 0.001008; Al 0.181264; Si 0.175774; Ca 0.000362; Ti 0.004323; Fe 0.001526",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.1
+    },
+    {
+      "Name": "Bronze (typical composition)",
+      "Composition": "Al 0.065612; Si 0.007378; Mn 0.004016; Fe 0.011343; Ni 0.007103; Cu 0.853653; Zn 0.034205; Sn 0.012809; Pb 0.003881",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.4
+    },
+    {
+      "Name": "C-552 Air-Equivalent Plastic",
+      "Composition": "H 0.268591; C 0.45814; O 0.003103; F 0.268613; Si 0.001552",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.76
+    },
+    {
+      "Name": "CELOTEX (Lignocellulosic Fiberboard)",
+      "Composition": "C 0.285714; H 0.476191; O 0.238095",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.25,
+      "Chemical Formula": "C6H10O5"
+    },
+    {
+      "Name": "CLLB(Ce) - Cesium Lithium Lanthanum Bromide - 0.3 wt% Cerium doped",
+      "Composition": "Cs 0.19994; Li 0.09997; La 0.09997; Br 0.599819; Ce 0.000301",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.2
+    },
+    {
+      "Name": "Cadmium",
+      "Composition": "Cd 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 8.65,
+      "Chemical Formula": "Cd"
+    },
+    {
+      "Name": "Cadmium Nitrate Tetrahydrate",
+      "Composition": "H 0.380953; N 0.095238; O 0.47619; Cd 0.047619",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.45,
+      "Chemical Formula": "CdN2O10H8"
+    },
+    {
+      "Name": "Cadmium Telluride",
+      "Composition": "Cd 0.5; Te 0.5",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.2,
+      "Chemical Formula": "CdTe"
+    },
+    {
+      "Name": "Cadmium Tungstate (CWO)",
+      "Composition": "O 0.666666; Cd 0.166666; W 0.166667",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 7.9,
+      "Chemical Formula": "CdWO4"
+    },
+    {
+      "Name": "Cadmium Zinc Telluride (CZT)",
+      "Composition": "Cd 0.333334; Zn 0.333333; Te 0.333334",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.78,
+      "Chemical Formula": "CdZnTe"
+    },
+    {
+      "Name": "Calcium Carbonate",
+      "Composition": "C 0.2; O 0.6; Ca 0.2",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.8,
+      "Chemical Formula": "CaCO3"
+    },
+    {
+      "Name": "Calcium Fluoride",
+      "Composition": "F 0.666667; Ca 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 3.18,
+      "Chemical Formula": "CaF2"
+    },
+    {
+      "Name": "Calcium Oxide",
+      "Composition": "O 0.5; Ca 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 3.3,
+      "Chemical Formula": "CaO"
+    },
+    {
+      "Name": "Calcium Sulfate",
+      "Composition": "O 0.666666; S 0.166667; Ca 0.166667",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.96,
+      "Chemical Formula": "CaSO4"
+    },
+    {
+      "Name": "Calcium Tungstate",
+      "Composition": "Ca 0.166667; W 0.166667; O 0.666666",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 7.9,
+      "Chemical Formula": "CaWO4"
+    },
+    {
+      "Name": "Carbon Dioxide",
+      "Composition": "C 0.333333; O 0.666667",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.001842,
+      "Chemical Formula": "CO2"
+    },
+    {
+      "Name": "Carbon Tetrachloride",
+      "Composition": "C 0.2; Cl 0.8",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.594,
+      "Chemical Formula": "CCl4"
+    },
+    {
+      "Name": "Carbon, Activated",
+      "Composition": "B 1e-06; C 0.999999",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 0.45
+    },
+    {
+      "Name": "Carbon, Amorphous",
+      "Composition": "B 1e-06; C 0.999999",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 2.0
+    },
+    {
+      "Name": "Carbon, Graphite (reactor grade)",
+      "Composition": "B 1e-06; C 0.999999",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 1.7
+    },
+    {
+      "Name": "Cat litter (clumping)",
+      "Composition": "H 0.437432; O 0.437322; Na 0.003988; Al 0.039762; Si 0.079508; Ca 0.001988",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 1.1
+    },
+    {
+      "Name": "Cat litter (non-clumping)",
+      "Composition": "H 0.213278; O 0.528384; Na 0.02947; Mg 0.032513; Al 0.030251; Si 0.163456; K 0.00151; Ca 0.000524; Fe 0.000614",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.8
+    },
+    {
+      "Name": "Cellulose",
+      "Composition": "H 0.476191; C 0.285714; O 0.238095",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.5,
+      "Chemical Formula": "C6H10O5"
+    },
+    {
+      "Name": "Cellulose Acetate",
+      "Composition": "H 0.476179; C 0.285724; O 0.238096",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.42
+    },
+    {
+      "Name": "Ceric Sulfate Dosimeter Solution",
+      "Composition": "H 0.65908; N 0.000352; O 0.337663; S 0.002816; Ce 8.8e-05",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.03
+    },
+    {
+      "Name": "Cerium Bromide",
+      "Composition": "Ce 0.250001; Br 0.75",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.2,
+      "Chemical Formula": "CeBr3(Ce)"
+    },
+    {
+      "Name": "Cerium Fluoride",
+      "Composition": "F 0.75; Ce 0.250001",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.16,
+      "Chemical Formula": "CeF3"
+    },
+    {
+      "Name": "Cesium Iodide - 1 wt% Sodium doped",
+      "Composition": "Cs 0.497513; I 0.497512; Na 0.004975",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.51
+    },
+    {
+      "Name": "Cesium Iodide - 1 wt% Thalium doped",
+      "Composition": "Cs 0.497512; I 0.497513; Tl 0.004975",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.51
+    },
+    {
+      "Name": "Cesium Lithium Yttrium Chloride (CLYC)",
+      "Composition": "Cs 0.2; Li 0.1; Y 0.1; Cl 0.6",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 3.31,
+      "Chemical Formula": "Cs2LiYCl6"
+    },
+    {
+      "Name": "Cesium Lithium Yttrium Chloride (CLYC) with 95% Li6 Enrichment",
+      "Composition": "Cs 0.2; Li 0.1; Y 0.1; Cl 0.6",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 3.31,
+      "Chemical Formula": "Cs2LiYCl6"
+    },
+    {
+      "Name": "Chromium",
+      "Composition": "Cr 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 7.18,
+      "Chemical Formula": "Cr"
+    },
+    {
+      "Name": "Clay",
+      "Composition": "O 0.633298; Na 0.006923; Mg 0.009202; Al 0.094688; Si 0.219137; P 7.6e-05; K 0.01093; Ca 0.009895; Ti 0.00204; Mn 2.4e-05; Fe 0.013787",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.2
+    },
+    {
+      "Name": "Coal, Anthracite",
+      "Composition": "H 0.228604; C 0.749029; N 0.006169; O 0.014402; S 0.001796",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.84
+    },
+    {
+      "Name": "Coal, Bituminous",
+      "Composition": "H 0.421414; C 0.533658; N 0.008665; O 0.033187; S 0.003075",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.75
+    },
+    {
+      "Name": "Coal, Lignite",
+      "Composition": "H 0.357496; C 0.519327; N 0.007351; O 0.114221; S 0.001605",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.75
+    },
+    {
+      "Name": "Concrete [Los Alamos (MCNP) Mix]",
+      "Composition": "H 0.084736; O 0.604078; Si 0.241925; Al 0.024842; Na 0.012523; Ca 0.027244; Fe 0.004652",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.25
+    },
+    {
+      "Name": "Concrete, Barite (Type BA)",
+      "Composition": "H 0.1096; O 0.600196; Mg 0.001515; Al 0.004777; Si 0.011474; S 0.103647; Ca 0.038594; Fe 0.026213; Ba 0.103985",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 3.35
+    },
+    {
+      "Name": "Concrete, Barytes-Limonite",
+      "Composition": "H 0.235412; O 0.548167; Na 0.000911; Mg 0.002201; Al 0.004311; Si 0.011183; S 0.05499; Ca 0.03117; Mn 0.000593; Fe 0.056904; Ba 0.054158",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 3.36
+    },
+    {
+      "Name": "Concrete, Boron Frits-baryte",
+      "Composition": "H 0.147509; B 0.025537; O 0.560956; F 0.003215; Na 0.013975; Mg 0.002513; Al 0.006298; Si 0.031294; S 0.075765; K 0.000679; Ca 0.041475; Mn 9.7e-05; Fe 0.010413; Zn 0.00268; Ba 0.077592",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 3.1
+    },
+    {
+      "Name": "Concrete, Colemanite-baryte",
+      "Composition": "H 0.208721; B 0.022432; O 0.539768; Na 0.001184; Mg 0.002241; Al 0.005596; Si 0.015511; S 0.074331; Ca 0.052248; Mn 4.5e-05; Fe 0.004565; Ba 0.073359",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 3.2
+    },
+    {
+      "Name": "Concrete, Ferro-phosphorus",
+      "Composition": "H 0.158638; O 0.207882; Mg 0.002632; Al 0.004741; Si 0.038716; P 0.203404; Ca 0.033514; Fe 0.350473",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 4.8
+    },
+    {
+      "Name": "Concrete, Hanford Dry",
+      "Composition": "H 0.078437; O 0.59559; Na 0.001864; Mg 0.011462; Al 0.05083; Si 0.195334; K 0.006577; Ca 0.039567; Fe 0.020338",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.18
+    },
+    {
+      "Name": "Concrete, Hanford Wet",
+      "Composition": "H 0.205169; O 0.539084; Na 0.001462; Mg 0.008992; Al 0.03988; Si 0.153253; K 0.00516; Ca 0.031043; Fe 0.015956",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.35
+    },
+    {
+      "Name": "Concrete, Iron-Portland",
+      "Composition": "H 0.135596; O 0.150642; Mg 0.002215; Al 0.005066; Si 0.013419; S 0.000646; Ca 0.040918; Mn 0.002638; Fe 0.64886",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 5.9
+    },
+    {
+      "Name": "Concrete, Iron-limonite",
+      "Composition": "H 0.0182; O 0.412587; Mg 0.003018; Al 0.006797; Si 0.018281; S 0.001144; Ca 0.055818; Mn 0.010681; Fe 0.473474",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 4.4
+    },
+    {
+      "Name": "Concrete, Limonite and steel",
+      "Composition": "H 0.209628; O 0.301635; Mg 0.001964; Al 0.007326; Si 0.016261; K 0.000698; Ca 0.04439; V 0.000535; Fe 0.417563",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 4.54
+    },
+    {
+      "Name": "Concrete, Luminite-Portland-colemanite-baryte",
+      "Composition": "H 0.248273; B 0.021458; O 0.525816; Na 0.001089; Mg 0.001872; Al 0.01113; Si 0.012069; S 0.063635; Ca 0.043537; Ti 0.000337; Mn 0.000166; Fe 0.007618; Ba 0.063001",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 3.1
+    },
+    {
+      "Name": "Concrete, Luminite-colemanite-baryte",
+      "Composition": "H 0.247673; B 0.018639; O 0.528947; Na 0.001096; Mg 0.001319; Al 0.01494; Si 0.007829; S 0.06471; Ca 0.031317; Ti 0.006077; Mn 0.0005; Fe 0.012591; Ba 0.064361",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 3.1
+    },
+    {
+      "Name": "Concrete, M-1",
+      "Composition": "H 0.244681; B 0.025659; O 0.206177; Mg 0.054541; Cl 0.018262; Mn 0.001683; Ca 0.008462; Fe 0.440534",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 4.5
+    },
+    {
+      "Name": "Concrete, MO",
+      "Composition": "H 0.187554; O 0.141792; Mg 0.057557; Mn 0.002753; Cl 0.013865; Fe 0.59648",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 5.5
+    },
+    {
+      "Name": "Concrete, Magnetite",
+      "Composition": "H 0.082377; O 0.551; Mg 0.010248; Al 0.023218; Si 0.024456; S 0.001177; Ca 0.047269; Ti 0.030274; V 0.00163; Cr 0.000871; Mn 0.000962; Fe 0.226518",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 3.53
+    },
+    {
+      "Name": "Concrete, Magnetite and steel",
+      "Composition": "H 0.086074; O 0.314487; Mg 0.005517; Al 0.01403; Si 0.020499; Ca 0.050769; Ti 0.012192; V 0.000464; Fe 0.495969",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 4.64
+    },
+    {
+      "Name": "Concrete, Magnuson's",
+      "Composition": "H 0.059731; C 0.159072; O 0.566259; Na 0.001113; Mg 0.070306; Al 0.005284; Si 0.027193; S 0.001405; Cl 0.000268; K 0.004382; Ca 0.102437; Ti 0.000564; Mn 0.000169; Fe 0.001817",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.147
+    },
+    {
+      "Name": "Concrete, Oak Ridge (ORNL)",
+      "Composition": "H 0.106687; C 0.253543; O 0.445629; Na 0.000205; Mg 0.023349; Al 0.006977; Si 0.021339; K 0.000506; Ca 0.139343; Fe 0.002423",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.2994
+    },
+    {
+      "Name": "Concrete, Ordinary (NBS 03)",
+      "Composition": "H 0.149857; C 0.074206; O 0.526836; Mg 0.017713; Al 0.023794; Si 0.091975; S 0.001649; K 0.000773; Ca 0.109681; Fe 0.003516",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.35
+    },
+    {
+      "Name": "Concrete, Ordinary (NBS 04)",
+      "Composition": "H 0.103584; O 0.584808; Na 0.013974; Mg 0.001982; Al 0.03185; Si 0.210759; S 0.000752; K 0.009244; Ca 0.038876; Fe 0.004171",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.35
+    },
+    {
+      "Name": "Concrete, Ordinary (NIST)",
+      "Composition": "H 0.305322; C 0.00288; O 0.50041; Na 0.009212; Mg 0.000725; Al 0.010298; Si 0.151046; K 0.003578; Ca 0.014924; Fe 0.001605",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.3
+    },
+    {
+      "Name": "Concrete, Portland",
+      "Composition": "H 0.168753; C 0.001416; O 0.562526; Na 0.011838; Mg 0.0014; Al 0.021354; Si 0.204119; K 0.005656; Ca 0.018674; Fe 0.004264",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.3
+    },
+    {
+      "Name": "Concrete, Regulatory Concrete (developed for U.S. NRC)",
+      "Composition": "H 0.168032; O 0.563185; Na 0.021365; Al 0.021343; Si 0.203235; Ca 0.018595; Fe 0.004246",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.3
+    },
+    {
+      "Name": "Concrete, Rocky Flats",
+      "Composition": "H 0.133297; C 0.082335; N 0.000256; O 0.542949; Na 0.004909; Mg 0.009213; Al 0.014408; Si 0.098871; S 0.001061; K 0.006277; Ca 0.102809; Ti 0.000374; Fe 0.00324",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.321
+    },
+    {
+      "Name": "Concrete, Serpentine",
+      "Composition": "H 0.246194; C 0.001181; O 0.498976; Na 0.002776; Mg 0.086638; Al 0.011036; Si 0.116124; K 0.001632; Ca 0.026536; Cr 0.000273; Fe 0.008633",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.1
+    },
+    {
+      "Name": "Copper",
+      "Composition": "Cu 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 8.96,
+      "Chemical Formula": "Cu"
+    },
+    {
+      "Name": "Diatomaceous Earth",
+      "Composition": "H 0.151307; O 0.581763; Na 0.00733; Mg 0.001944; Al 0.009834; Si 0.239362; K 0.004823; Ca 0.001676; Fe 0.001962",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.2563
+    },
+    {
+      "Name": "Diesel Fuel",
+      "Composition": "H 0.657143; C 0.342857",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.849,
+      "Chemical Formula": "C12H23"
+    },
+    {
+      "Name": "Earth Soil, Typical Western U.S.",
+      "Composition": "H 0.316843; O 0.501587; Al 0.039952; Si 0.141618",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 1.52
+    },
+    {
+      "Name": "Earth Soil, U.S. Average",
+      "Composition": "O 0.670604; Na 0.005578; Mg 0.011432; Al 0.053073; Si 0.201665; K 0.007653; Ca 0.026664; Ti 0.002009; Mn 0.000272; Fe 0.02105",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 1.52
+    },
+    {
+      "Name": "Ethane",
+      "Composition": "H 0.75; C 0.25",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.001253,
+      "Chemical Formula": "C2H6"
+    },
+    {
+      "Name": "Ethyl Acetate",
+      "Composition": "H 0.571429; C 0.285714; O 0.142857",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.901,
+      "Chemical Formula": "C4H8O2"
+    },
+    {
+      "Name": "Ethyl Alcohol",
+      "Composition": "H 0.666667; C 0.222222; O 0.111111",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.7893,
+      "Chemical Formula": "C2H6O"
+    },
+    {
+      "Name": "Ethylene",
+      "Composition": "H 0.666667; C 0.333333",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.001174,
+      "Chemical Formula": "C2H4"
+    },
+    {
+      "Name": "Ethylene Glycol",
+      "Composition": "H 0.6; C 0.2; O 0.2",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.114,
+      "Chemical Formula": "C2H6O2"
+    },
+    {
+      "Name": "Explosive Compound, AN",
+      "Composition": "H 0.444444; N 0.222222; O 0.333333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.72,
+      "Chemical Formula": "N2H4O3"
+    },
+    {
+      "Name": "Explosive Compound, EGDN",
+      "Composition": "H 0.285714; C 0.142857; N 0.142857; O 0.428572",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.49,
+      "Chemical Formula": "C2H4N2O6"
+    },
+    {
+      "Name": "Explosive Compound, HMX",
+      "Composition": "H 0.285714; C 0.142857; N 0.285714; O 0.285715",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.91,
+      "Chemical Formula": "C4H8N8O8"
+    },
+    {
+      "Name": "Explosive Compound, NC",
+      "Composition": "H 0.300764; C 0.234387; N 0.089844; O 0.375006",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.49
+    },
+    {
+      "Name": "Explosive Compound, NG",
+      "Composition": "H 0.25; C 0.15; N 0.15; O 0.45",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.6,
+      "Chemical Formula": "C3H5N3O9"
+    },
+    {
+      "Name": "Explosive Compound, PETN",
+      "Composition": "H 0.275862; C 0.172414; N 0.137931; O 0.413792",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.77,
+      "Chemical Formula": "C5H8N4O12"
+    },
+    {
+      "Name": "Explosive Compound, RDX",
+      "Composition": "H 0.285714; C 0.142857; N 0.285714; O 0.285715",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.858,
+      "Chemical Formula": "C3H6N6O6"
+    },
+    {
+      "Name": "Explosive Compound, TNT",
+      "Composition": "H 0.238095; C 0.333333; N 0.142857; O 0.285715",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.654,
+      "Chemical Formula": "C7H5N3O6"
+    },
+    {
+      "Name": "Eye Lens (ICRP)",
+      "Composition": "H 0.618319; C 0.10126; N 0.023878; O 0.256542",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.1
+    },
+    {
+      "Name": "Felt",
+      "Composition": "H 0.384043; C 0.316908; N 0.11036; O 0.188689",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.185
+    },
+    {
+      "Name": "Ferric Oxide",
+      "Composition": "O 0.6; Fe 0.4",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 5.2,
+      "Chemical Formula": "Fe2O3"
+    },
+    {
+      "Name": "Ferrous Sulfate Dosimeter Solution",
+      "Composition": "H 0.66001; N 1.2e-05; O 0.337475; Na 6e-06; S 0.002485; Cl 5e-06; Fe 6e-06",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.024
+    },
+    {
+      "Name": "Fertilizer (Muriate of Potash)",
+      "Composition": "H 0.001833; O 0.001658; Na 0.013642; Mg 0.000313; S 0.000183; Cl 0.49818; K 0.483783; Ca 0.000254; Br 0.000152",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 1.121
+    },
+    {
+      "Name": "Fiberglass, Type C",
+      "Composition": "B 0.035032; O 0.609971; Na 0.052479; Mg 0.015131; Al 0.01595; Si 0.219923; S 0.000254; Ca 0.050751; Fe 0.000509",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.54
+    },
+    {
+      "Name": "Fiberglass, Type E",
+      "Composition": "B 0.043749; O 0.61197; F 0.005345; Na 0.006553; Mg 0.012598; Al 0.055773; Si 0.182532; K 0.004312; Ca 0.074245; Ti 0.001907; Fe 0.001018",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.57
+    },
+    {
+      "Name": "Fiberglass, Type R",
+      "Composition": "O 0.628478; Mg 0.030755; Al 0.101309; Si 0.206302; Ca 0.033156",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.52
+    },
+    {
+      "Name": "Freon-12",
+      "Composition": "C 0.2; F 0.4; Cl 0.4",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.12,
+      "Chemical Formula": "CF2Cl2"
+    },
+    {
+      "Name": "Freon-12B2",
+      "Composition": "C 0.2; F 0.4; Br 0.4",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.8,
+      "Chemical Formula": "CF2Br2"
+    },
+    {
+      "Name": "Freon-13",
+      "Composition": "C 0.2; F 0.6; Cl 0.2",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.95,
+      "Chemical Formula": "CF3Cl"
+    },
+    {
+      "Name": "Freon-13B1",
+      "Composition": "C 0.2; F 0.6; Br 0.2",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.5,
+      "Chemical Formula": "CF3Br"
+    },
+    {
+      "Name": "Freon-13I1",
+      "Composition": "C 0.2; F 0.6; I 0.2",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.8,
+      "Chemical Formula": "CF3I"
+    },
+    {
+      "Name": "GAGG(CE)",
+      "Composition": "Gd 0.15; Al 0.1; Ga 0.15; O 0.6",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.63,
+      "Chemical Formula": "Gd3Al2Ga3O12"
+    },
+    {
+      "Name": "Gadolinium",
+      "Composition": "Gd 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 7.9004,
+      "Chemical Formula": "Gd"
+    },
+    {
+      "Name": "Gadolinium Aluminum Galium Oxide - 0.5 atom% Cerium doped",
+      "Composition": "Gd 0.14925; Al 0.0995; Ga 0.14925; O 0.597; Ce 0.005001",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.6
+    },
+    {
+      "Name": "Gadolinium Oxysulfide",
+      "Composition": "O 0.4; S 0.2; Gd 0.4",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 7.44,
+      "Chemical Formula": "Gd2O2S"
+    },
+    {
+      "Name": "Gadolinium Silicate (GSO)",
+      "Composition": "O 0.625; Si 0.125; Gd 0.25",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.71,
+      "Chemical Formula": "Gd2SiO5"
+    },
+    {
+      "Name": "Gafchromic Sensor (GS)",
+      "Composition": "H 0.558076; C 0.316313; N 0.050235; O 0.075376",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 1.3
+    },
+    {
+      "Name": "Gallium Arsenide",
+      "Composition": "Ga 0.5; As 0.5",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.31,
+      "Chemical Formula": "GaAs"
+    },
+    {
+      "Name": "Gasoline",
+      "Composition": "H 0.692308; C 0.307692",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.721,
+      "Chemical Formula": "C8H18"
+    },
+    {
+      "Name": "Germanium, High Purity",
+      "Composition": "Ge 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 5.323,
+      "Chemical Formula": "Ge"
+    },
+    {
+      "Name": "Glass Scintillator, Li Doped (GS1, GS2, GS3)",
+      "Composition": "Li 0.077858; O 0.581369; Mg 0.115886; Al 0.041992; Si 0.178152; Ce 0.004744",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 2.66
+    },
+    {
+      "Name": "Glass Scintillator, Li Doped (GS10, GS20, GS30)",
+      "Composition": "Li 0.209064; O 0.545545; Mg 0.017287; Al 0.061502; Si 0.162355; Ce 0.004246",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 2.5
+    },
+    {
+      "Name": "Glass Scintillator, Li Doped (GSF1, GSF2, and GSF3)",
+      "Composition": "Li 0.123884; O 0.586223; Na 0.014389; Al 0.0656; Si 0.207188; Ce 0.002717",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 2.42
+    },
+    {
+      "Name": "Glass Scintillator, Li Doped (KG1, KG2, KG3)",
+      "Composition": "Li 0.238376; O 0.546764; Si 0.209674; Ce 0.005187",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 2.42
+    },
+    {
+      "Name": "Glass, Borosilicate (Pyrex Glass)",
+      "Composition": "B 0.070433; O 0.641102; Na 0.023311; Al 0.008204; Si 0.255335; K 0.001615",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.23
+    },
+    {
+      "Name": "Glass, Foam",
+      "Composition": "H 0.018717; B 0.026171; O 0.629687; Na 0.132123; Si 0.18742; S 0.005883",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.128
+    },
+    {
+      "Name": "Glass, Lead",
+      "Composition": "O 0.592952; Si 0.174595; Ti 0.010251; As 0.002146; Pb 0.220056",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 6.22
+    },
+    {
+      "Name": "Glass, Plate",
+      "Composition": "O 0.603855; Na 0.088144; Si 0.251795; Ca 0.056205",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.4
+    },
+    {
+      "Name": "Glycerol",
+      "Composition": "H 0.571428; C 0.214286; O 0.214285",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.2613,
+      "Chemical Formula": "C3H8O3"
+    },
+    {
+      "Name": "Gold",
+      "Composition": "Au 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 19.32,
+      "Chemical Formula": "Au"
+    },
+    {
+      "Name": "Gypsum (Plaster of Paris)",
+      "Composition": "H 0.333333; O 0.5; S 0.083333; Ca 0.083333",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.32,
+      "Chemical Formula": "Ca1S1O6H4"
+    },
+    {
+      "Name": "He-3 Proportional Gas",
+      "Composition": "He 1",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.000125264512473336,
+      "Chemical Formula": "He"
+    },
+    {
+      "Name": "He-4 Gas Detector",
+      "Composition": "He 1",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.03,
+      "Chemical Formula": "He"
+    },
+    {
+      "Name": "Helium, Natural",
+      "Composition": "He 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.000166322,
+      "Chemical Formula": "He"
+    },
+    {
+      "Name": "Hydrogen",
+      "Composition": "H 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 8.3748e-05,
+      "Chemical Formula": "H2"
+    },
+    {
+      "Name": "Incoloy Alloy 800",
+      "Composition": "C 0.002984; Al 0.007663; Si 0.012761; S 0.000167; Ti 0.00432; Cr 0.222684; Mn 0.009785; Fe 0.430102; Ni 0.305305; Cu 0.00423",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.94
+    },
+    {
+      "Name": "Inconel Alloy 600",
+      "Composition": "C 0.004618; Si 0.006584; S 0.000172; Cr 0.169596; Mn 0.006731; Fe 0.081501; Ni 0.727888; Cu 0.00291",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.47
+    },
+    {
+      "Name": "Inconel Alloy 625",
+      "Composition": "C 0.004852; Al 0.008639; Si 0.010374; P 0.000281; S 0.000272; Ti 0.004869; Cr 0.24338; Mn 0.005303; Fe 0.052167; Co 0.009887; Ni 0.581642; Nb 0.023124; Mo 0.05521",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.44
+    },
+    {
+      "Name": "Inconel Alloy 718",
+      "Composition": "B 0.000293; C 0.003498; Al 0.010694; Si 0.006542; P 0.000253; S 0.000245; Ti 0.01085; Cr 0.210869; Mn 0.003344; Fe 0.175669; Ni 0.516178; Co 0.008909; Cu 0.002478; Nb 0.031833; Mo 0.018344",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.19
+    },
+    {
+      "Name": "Indium",
+      "Composition": "In 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 7.31,
+      "Chemical Formula": "In"
+    },
+    {
+      "Name": "Iron",
+      "Composition": "Fe 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 7.874,
+      "Chemical Formula": "Fe"
+    },
+    {
+      "Name": "Iron Boride (Fe2B)",
+      "Composition": "B 0.666667; Fe 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 7.3,
+      "Chemical Formula": "Fe2B"
+    },
+    {
+      "Name": "Iron Boride (FeB)",
+      "Composition": "B 0.5; Fe 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 7.15,
+      "Chemical Formula": "FeB"
+    },
+    {
+      "Name": "Iron, Armco Ingot",
+      "Composition": "C 0.000556; O 0.003826; P 9e-05; S 0.000434; Mn 0.000172; Fe 0.994922",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.866
+    },
+    {
+      "Name": "Iron, Cast (gray)",
+      "Composition": "C 0.137105; Si 0.044837; P 0.004691; S 0.00151; Mn 0.00573; Fe 0.806127",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.15
+    },
+    {
+      "Name": "Iron, Wrought (Byers No.1)",
+      "Composition": "C 0.003747; Si 0.003163; P 0.001127; S 0.000175; Mn 0.000154; Fe 0.991634",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.7
+    },
+    {
+      "Name": "Kaowool",
+      "Composition": "B 0.000467; O 0.6361; Al 0.179644; Si 0.176545; Ca 0.000363; Ti 0.004332; Fe 0.002549",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.096
+    },
+    {
+      "Name": "Kapton Polyimide Film",
+      "Composition": "H 0.256391; C 0.564121; N 0.051282; O 0.128206",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.42
+    },
+    {
+      "Name": "Kennertium",
+      "Composition": "Ni 0.191007; Cu 0.294036; W 0.514957",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 16.8
+    },
+    {
+      "Name": "Kernite",
+      "Composition": "H 0.32; B 0.16; O 0.44; Na 0.08",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 1.95,
+      "Chemical Formula": "Na2B4O11H8"
+    },
+    {
+      "Name": "Kerosene",
+      "Composition": "H 0.681818; C 0.318182",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.819,
+      "Chemical Formula": "C14H30"
+    },
+    {
+      "Name": "Krypton",
+      "Composition": "Kr 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.00347832,
+      "Chemical Formula": "Kr"
+    },
+    {
+      "Name": "Kynar",
+      "Composition": "H 0.333333; C 0.333333; F 0.333333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.79,
+      "Chemical Formula": "H2C2F2"
+    },
+    {
+      "Name": "Lanthanum Bromide - 0.5 wt% Cerium doped",
+      "Composition": "Br 0.755995; Ce 0.001249; La 0.242756",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.08
+    },
+    {
+      "Name": "Lanthanum Bromide - 10 wt% Cerium and 0.10 wt% Strontium doped",
+      "Composition": "Br 0.75; Ce 0.024999; La 0.22475; Sr 0.000249",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.08
+    },
+    {
+      "Name": "Lanthanum Bromide - 10 wt% Cerium doped",
+      "Composition": "Br 0.748694; Ce 0.024741; La 0.226565",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.08
+    },
+    {
+      "Name": "Lanthanum Bromide - 5 wt% Cerium doped",
+      "Composition": "Br 0.748532; Ce 0.012368; La 0.2391",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.08
+    },
+    {
+      "Name": "Lead",
+      "Composition": "Pb 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 11.35,
+      "Chemical Formula": "Pb"
+    },
+    {
+      "Name": "Lead Iodide",
+      "Composition": "Pb 0.333333; I 0.666667",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 6.16,
+      "Chemical Formula": "PbI2"
+    },
+    {
+      "Name": "Lead Tungstate (PWO)",
+      "Composition": "O 0.666666; W 0.166667; Pb 0.166667",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 8.24,
+      "Chemical Formula": "PbWO4"
+    },
+    {
+      "Name": "Lithium",
+      "Composition": "Li 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.534,
+      "Chemical Formula": "Li"
+    },
+    {
+      "Name": "Lithium Amide",
+      "Composition": "H 0.500001; Li 0.25; N 0.25",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 1.178,
+      "Chemical Formula": "LiNH2"
+    },
+    {
+      "Name": "Lithium Fluoride",
+      "Composition": "Li 0.5; F 0.5",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 2.635,
+      "Chemical Formula": "LiF"
+    },
+    {
+      "Name": "Lithium Gadolinium Borate (LGB)",
+      "Composition": "Li 0.315789; B 0.157895; O 0.473684; Gd 0.052632",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 3.5,
+      "Chemical Formula": "Li6GdB3O9"
+    },
+    {
+      "Name": "Lithium Hydride",
+      "Composition": "H 0.500001; Li 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 0.82,
+      "Chemical Formula": "LiH"
+    },
+    {
+      "Name": "Lithium Iodide (high density)",
+      "Composition": "Li 0.5; I 0.5",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.08,
+      "Chemical Formula": "LiI"
+    },
+    {
+      "Name": "Lithium Iodide (low density)",
+      "Composition": "Li 0.5; I 0.5",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 3.494,
+      "Chemical Formula": "LiI"
+    },
+    {
+      "Name": "Lithium Oxide",
+      "Composition": "Li 0.666667; O 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.013,
+      "Chemical Formula": "Li2O"
+    },
+    {
+      "Name": "Lithium Tetraborate",
+      "Composition": "Li 0.153846; B 0.307693; O 0.538462",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.44,
+      "Chemical Formula": "Li2B4O7"
+    },
+    {
+      "Name": "Lucite",
+      "Composition": "H 0.533333; C 0.333333; O 0.133333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.19,
+      "Chemical Formula": "C5O2H8"
+    },
+    {
+      "Name": "Lutetium Aluminum Garnet (LuAG)",
+      "Composition": "O 0.6; Al 0.25; Lu 0.150001",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.73,
+      "Chemical Formula": "Al5Lu3O12"
+    },
+    {
+      "Name": "Lutetium Iodide",
+      "Composition": "Lu 0.25; I 0.75",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.6,
+      "Chemical Formula": "LuI3"
+    },
+    {
+      "Name": "Lutetium Orthoaluminate (LuAP)",
+      "Composition": "O 0.6; Al 0.2; Lu 0.2",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 8.4,
+      "Chemical Formula": "LuAlO3"
+    },
+    {
+      "Name": "Lutetium Oxyorthosilicate (LSO)",
+      "Composition": "O 0.625; Si 0.125; Lu 0.25",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 7.4,
+      "Chemical Formula": "Lu2SiO5"
+    },
+    {
+      "Name": "Lutetium Yttrium OxyorthoSilicate: 0.5 atom% Cerium (LYSO)",
+      "Composition": "O 0.621875; Si 0.124375; Y 0.012438; Lu 0.236313; Ce 0.005001",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 7.25
+    },
+    {
+      "Name": "Magnesium",
+      "Composition": "Mg 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 1.74,
+      "Chemical Formula": "Mg"
+    },
+    {
+      "Name": "Magnesium Oxide",
+      "Composition": "O 0.5; Mg 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 3.58,
+      "Chemical Formula": "MgO"
+    },
+    {
+      "Name": "Magnesium Tetraborate",
+      "Composition": "B 0.333333; O 0.583335; Mg 0.083333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.53,
+      "Chemical Formula": "MgB4O7"
+    },
+    {
+      "Name": "Masonite",
+      "Composition": "H 0.476191; C 0.285714; O 0.238095",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.3,
+      "Chemical Formula": "C6H10O5"
+    },
+    {
+      "Name": "Melamine",
+      "Composition": "H 0.4; C 0.2; N 0.4",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.573,
+      "Chemical Formula": "C3H6N6"
+    },
+    {
+      "Name": "Melamine Formaldehyde",
+      "Composition": "H 0.388889; C 0.277778; N 0.333333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.35,
+      "Chemical Formula": "C5H7N6"
+    },
+    {
+      "Name": "Mercuric Iodide",
+      "Composition": "I 0.666667; Hg 0.333333",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.36,
+      "Chemical Formula": "HgI2"
+    },
+    {
+      "Name": "Mercury",
+      "Composition": "Hg 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 13.546,
+      "Chemical Formula": "Hg"
+    },
+    {
+      "Name": "Methane",
+      "Composition": "H 0.8; C 0.2",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.000667151,
+      "Chemical Formula": "CH4"
+    },
+    {
+      "Name": "Methanol",
+      "Composition": "H 0.666666; C 0.166667; O 0.166667",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.7914,
+      "Chemical Formula": "CH40"
+    },
+    {
+      "Name": "Methylene Chloride",
+      "Composition": "H 0.4; C 0.2; Cl 0.4",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.3266,
+      "Chemical Formula": "CH2Cl2"
+    },
+    {
+      "Name": "Molybdenum",
+      "Composition": "Mo 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 10.22,
+      "Chemical Formula": "Mo"
+    },
+    {
+      "Name": "Monosodium Titanate, MST",
+      "Composition": "H 0.111111; O 0.555556; Na 0.111111; Ti 0.222222",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 1.0,
+      "Chemical Formula": "NaTi2O5H"
+    },
+    {
+      "Name": "Mortar",
+      "Composition": "Al 0.176573; Ca 0.001118; O 0.625073; Fe 0.004185; K 0.003991; Na 0.018197; Si 0.167202; Ti 0.003661",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 1.97
+    },
+    {
+      "Name": "Muscle Equivalent-Liquid, with sucrose",
+      "Composition": "H 0.619256; C 0.082644; N 0.016083; O 0.282016",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.11
+    },
+    {
+      "Name": "Muscle Equivalent-Liquid, without sucrose",
+      "Composition": "H 0.631874; C 0.062437; N 0.015809; O 0.28988",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.07
+    },
+    {
+      "Name": "Muscle, Skeletal",
+      "Composition": "H 0.630924; C 0.056734; N 0.012488; O 0.298113; Na 0.000206; Mg 4.9e-05; P 0.000367; S 0.000475; Cl 0.000141; K 0.000488; Ca 5e-06; Fe 5e-06; Zn 5e-06",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.04
+    },
+    {
+      "Name": "Muscle, Striated",
+      "Composition": "H 0.633092; C 0.064072; N 0.015634; O 0.285072; Na 0.000218; Mg 5.1e-05; P 0.000404; S 0.000976; K 0.00048",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.04
+    },
+    {
+      "Name": "NE-213 Equivalent",
+      "Composition": "C 0.444444; H 0.555556",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 0.874,
+      "Chemical Formula": "C8H10"
+    },
+    {
+      "Name": "Neon",
+      "Composition": "Ne 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.000838505,
+      "Chemical Formula": "Ne"
+    },
+    {
+      "Name": "Nickel",
+      "Composition": "Ni 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 8.902,
+      "Chemical Formula": "Ni"
+    },
+    {
+      "Name": "Niobium",
+      "Composition": "Nb 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 8.57,
+      "Chemical Formula": "Nb"
+    },
+    {
+      "Name": "Nitrogen",
+      "Composition": "N 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.00116528,
+      "Chemical Formula": "N2"
+    },
+    {
+      "Name": "Nylon, Dupont ELVAmide 8062",
+      "Composition": "H 0.593353; C 0.311942; N 0.04106; O 0.053644",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.08
+    },
+    {
+      "Name": "Nylon, Type 11 (Rilsan)",
+      "Composition": "H 0.617647; C 0.323529; N 0.029412; O 0.029411",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.425,
+      "Chemical Formula": "C11H21NO"
+    },
+    {
+      "Name": "Nylon, Type 6 and Type 6/6",
+      "Composition": "H 0.578948; C 0.315789; N 0.052632; O 0.052632",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.14,
+      "Chemical Formula": "C6H11NO"
+    },
+    {
+      "Name": "Nylon, Type 6/10",
+      "Composition": "H 0.6; C 0.32; N 0.04; O 0.04",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.14,
+      "Chemical Formula": "C8H15NO"
+    },
+    {
+      "Name": "Oil, Crude (Heavy, Cold Lake, Canada)",
+      "Composition": "H 0.588875; C 0.397741; N 0.00163; O 0.003923; S 0.007831",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.97
+    },
+    {
+      "Name": "Oil, Crude (Heavy, Mexican)",
+      "Composition": "H 0.587741; C 0.40476; S 0.007499",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.975
+    },
+    {
+      "Name": "Oil, Crude (Heavy, Qayarah, Iraq)",
+      "Composition": "H 0.590036; C 0.391776; N 0.002914; S 0.015274",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.97
+    },
+    {
+      "Name": "Oil, Crude (Light, Texas)",
+      "Composition": "H 0.629377; C 0.36523; N 0.002577; S 0.002815",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.875
+    },
+    {
+      "Name": "Oil, Fuel (Calif.)",
+      "Composition": "H 0.633771; C 0.364359; S 0.00187",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.955
+    },
+    {
+      "Name": "Oil, Hydraulic",
+      "Composition": "H 0.392857; C 0.47619; O 0.047619; P 0.011905; Cl 0.071428",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.871,
+      "Chemical Formula": "C40H33O4Cl6P"
+    },
+    {
+      "Name": "Oil, Lard",
+      "Composition": "H 0.620688; C 0.344828; O 0.034483",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.915,
+      "Chemical Formula": "C10H18O"
+    },
+    {
+      "Name": "Oxygen",
+      "Composition": "O 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.00133151,
+      "Chemical Formula": "O2"
+    },
+    {
+      "Name": "P-10 gas",
+      "Composition": "H 0.285714; C 0.071429; Ar 0.642857",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.001561
+    },
+    {
+      "Name": "P-5 gas",
+      "Composition": "H 0.166667; C 0.041667; Ar 0.791666",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.001611
+    },
+    {
+      "Name": "P-terphenyl",
+      "Composition": "H 0.4375; C 0.5625",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 1.28,
+      "Chemical Formula": "C18H14"
+    },
+    {
+      "Name": "Palladium",
+      "Composition": "Pd 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 12.02,
+      "Chemical Formula": "Pd"
+    },
+    {
+      "Name": "Paper, News print",
+      "Composition": "H 0.476191; C 0.285714; O 0.238095",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.65,
+      "Chemical Formula": "C6H10O5"
+    },
+    {
+      "Name": "Paper, glossy",
+      "Composition": "H 0.476191; C 0.285714; O 0.238095",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.135,
+      "Chemical Formula": "C6H10O5"
+    },
+    {
+      "Name": "Paper, printer",
+      "Composition": "H 0.476191; C 0.285714; O 0.238095",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.69,
+      "Chemical Formula": "C6H10O5"
+    },
+    {
+      "Name": "Photographic Emulsion, Gel in",
+      "Composition": "H 0.546943; C 0.235252; N 0.053934; O 0.161567; S 0.002304",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 1.2914
+    },
+    {
+      "Name": "Photographic Emulsion, Kodak Type AA",
+      "Composition": "H 0.440284; C 0.25526; N 0.0749; O 0.148422; Br 0.040572; Ag 0.040562",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 2.2
+    },
+    {
+      "Name": "Photographic Emulsion, Standard Nuclear",
+      "Composition": "H 0.407073; C 0.175082; N 0.040139; O 0.120228; S 0.001715; Br 0.127142; Ag 0.127904; I 0.000715",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 3.815
+    },
+    {
+      "Name": "Platinum",
+      "Composition": "Pt 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 21.45,
+      "Chemical Formula": "Pt"
+    },
+    {
+      "Name": "Plutonium Bromide",
+      "Composition": "Br 0.75; Pu 0.25",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 6.75,
+      "Chemical Formula": "PuBr3"
+    },
+    {
+      "Name": "Plutonium Carbide",
+      "Composition": "C 0.5; Pu 0.5",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 13.6,
+      "Chemical Formula": "PuC"
+    },
+    {
+      "Name": "Plutonium Chloride",
+      "Composition": "Cl 0.75; Pu 0.25",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 5.71,
+      "Chemical Formula": "PuCl3"
+    },
+    {
+      "Name": "Plutonium Dioxide",
+      "Composition": "O 0.666667; Pu 0.333333",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 11.46,
+      "Chemical Formula": "PuO2"
+    },
+    {
+      "Name": "Plutonium Fluoride (PuF3)",
+      "Composition": "F 0.75; Pu 0.25",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 9.33,
+      "Chemical Formula": "PuF3"
+    },
+    {
+      "Name": "Plutonium Fluoride (PuF4)",
+      "Composition": "F 0.8; Pu 0.2",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 7.1,
+      "Chemical Formula": "PuF4"
+    },
+    {
+      "Name": "Plutonium Fluoride (PuF6)",
+      "Composition": "F 0.857143; Pu 0.142858",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 5.08,
+      "Chemical Formula": "PuF6"
+    },
+    {
+      "Name": "Plutonium Iodide",
+      "Composition": "I 0.75; Pu 0.25",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 6.92,
+      "Chemical Formula": "PuI3"
+    },
+    {
+      "Name": "Plutonium Nitrate",
+      "Composition": "N 0.235294; O 0.705882; Pu 0.058824",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 2.447,
+      "Chemical Formula": "PuN4O12"
+    },
+    {
+      "Name": "Plutonium Nitride",
+      "Composition": "N 0.5; Pu 0.5",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 14.25,
+      "Chemical Formula": "PuN"
+    },
+    {
+      "Name": "Plutonium Oxide (Pu2O3)",
+      "Composition": "O 0.6; Pu 0.400001",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 10.5,
+      "Chemical Formula": "Pu2O3"
+    },
+    {
+      "Name": "Plutonium Oxide (PuO)",
+      "Composition": "O 0.5; Pu 0.5",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 14.0,
+      "Chemical Formula": "PuO"
+    },
+    {
+      "Name": "Plutonium, Aged WGPu (A: 4-7% Pu240)",
+      "Composition": "Pu 0.998611; Am 0.001389",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 19.84
+    },
+    {
+      "Name": "Plutonium, Aged WGPu (B: 10-13% Pu240)",
+      "Composition": "Pu 0.991466; Am 0.008534",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 19.84
+    },
+    {
+      "Name": "Plutonium, Aged WGPu (C: 16-19% Pu240)",
+      "Composition": "Pu 0.972201; Am 0.027798",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 19.84
+    },
+    {
+      "Name": "Plutonium, DOE 3013 WGPu",
+      "Composition": "Pu 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 19.84,
+      "Chemical Formula": "Pu"
+    },
+    {
+      "Name": "Plutonium, Fuel Grade",
+      "Composition": "Pu 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 19.84,
+      "Chemical Formula": "Pu"
+    },
+    {
+      "Name": "Plutonium, Power Grade",
+      "Composition": "Pu 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 19.84,
+      "Chemical Formula": "Pu"
+    },
+    {
+      "Name": "Plutonium, Shefelbine WGPu",
+      "Composition": "Pu 0.999801; Am 0.000198",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 19.84
+    },
+    {
+      "Name": "Polycarbonate",
+      "Composition": "H 0.424243; C 0.484848; O 0.090909",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.2,
+      "Chemical Formula": "C16H14O3"
+    },
+    {
+      "Name": "Polyethylene Terephthalate (PET)",
+      "Composition": "H 0.363637; C 0.454545; O 0.181818",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.38,
+      "Chemical Formula": "C10H8O4"
+    },
+    {
+      "Name": "Polyethylene, Borated",
+      "Composition": "H 0.627755; B 0.04668; C 0.325564",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.0
+    },
+    {
+      "Name": "Polyethylene, Non-borated",
+      "Composition": "H 0.666667; C 0.333333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.93,
+      "Chemical Formula": "C2H4"
+    },
+    {
+      "Name": "Polyisocyanurate (PIR)",
+      "Composition": "H 0.344828; C 0.51724; N 0.068965; O 0.068965",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.0482,
+      "Chemical Formula": "C15H10N2O2"
+    },
+    {
+      "Name": "Polypropylene (PP)",
+      "Composition": "H 0.666667; C 0.333333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.9,
+      "Chemical Formula": "C3H6"
+    },
+    {
+      "Name": "Polystyrene (PS)",
+      "Composition": "H 0.500001; C 0.5",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.06,
+      "Chemical Formula": "C8H8"
+    },
+    {
+      "Name": "Polytetrafluoroethylene (PTFE)",
+      "Composition": "C 0.333333; F 0.666667",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 2.25,
+      "Chemical Formula": "C2F4"
+    },
+    {
+      "Name": "Polyurethane Foam (PUR)",
+      "Composition": "H 0.360023; C 0.400878; N 0.076459; O 0.162639",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.021
+    },
+    {
+      "Name": "Polyvinyl Acetate (PVA)",
+      "Composition": "H 0.500001; C 0.333333; O 0.166667",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.19,
+      "Chemical Formula": "C4H6O2"
+    },
+    {
+      "Name": "Polyvinyl Chloride (PVC)",
+      "Composition": "H 0.500001; C 0.333333; Cl 0.166667",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.406,
+      "Chemical Formula": "C2H3Cl"
+    },
+    {
+      "Name": "Polyvinyl Toluene (PVT)",
+      "Composition": "H 0.526316; C 0.473684",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 1.032,
+      "Chemical Formula": "C9H10"
+    },
+    {
+      "Name": "Polyvinylidene Chloride (PVDC)",
+      "Composition": "H 0.333333; C 0.333333; Cl 0.333333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.7,
+      "Chemical Formula": "C2H2Cl2"
+    },
+    {
+      "Name": "Potassium Aluminum Silicate",
+      "Composition": "O 0.615385; Al 0.076923; Si 0.230769; K 0.076923",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 1.1,
+      "Chemical Formula": "KAlSi3O8"
+    },
+    {
+      "Name": "Potassium Iodide",
+      "Composition": "K 0.5; I 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 3.13,
+      "Chemical Formula": "KI"
+    },
+    {
+      "Name": "Potassium Oxide",
+      "Composition": "O 0.333333; K 0.666667",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.32,
+      "Chemical Formula": "K2O"
+    },
+    {
+      "Name": "Propane (gas)",
+      "Composition": "H 0.727273; C 0.272727",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.00187939,
+      "Chemical Formula": "C3H8"
+    },
+    {
+      "Name": "Propane (liquid)",
+      "Composition": "H 0.727273; C 0.272727",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.43,
+      "Chemical Formula": "C3H8"
+    },
+    {
+      "Name": "Quartz",
+      "Composition": "O 0.666667; Si 0.333333",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.62,
+      "Chemical Formula": "SiO2"
+    },
+    {
+      "Name": "Quartz Glass",
+      "Composition": "O 0.666667; Si 0.333333",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.2,
+      "Chemical Formula": "SiO2"
+    },
+    {
+      "Name": "Radiochromic Dye Film, Nylon Base (RDF: NB)",
+      "Composition": "H 0.589064; C 0.317179; N 0.041111; O 0.052647",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 1.08
+    },
+    {
+      "Name": "Rayon",
+      "Composition": "H 0.476191; C 0.285714; O 0.237607",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.16,
+      "Chemical Formula": "C6H10O5"
+    },
+    {
+      "Name": "Rock (Average of 5 types)",
+      "Composition": "H 0.027052; C 0.098551; O 0.561516; Na 0.012119; Mg 0.027079; Al 0.043135; Si 0.147747; P 0.000307; S 0.005618; K 0.008671; Ca 0.054072; Ti 0.001514; Mn 0.000165; Fe 0.012454",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.662
+    },
+    {
+      "Name": "Rock, Basalt",
+      "Composition": "O 0.629838; Na 0.024716; Mg 0.003656; Al 0.058713; Si 0.24888; P 0.000351; K 0.018158; Ca 0.006737; Ti 0.00078; Mn 0.000146; Fe 0.008025",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 3.01
+    },
+    {
+      "Name": "Rock, Granite",
+      "Composition": "O 0.607744; Na 0.020743; Mg 0.037864; Al 0.068362; Si 0.182167; P 0.001047; K 0.005014; Ca 0.03782; Ti 0.005119; Mn 0.000616; Fe 0.033504",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.69
+    },
+    {
+      "Name": "Rock, Limestone",
+      "Composition": "C 0.190012; O 0.603322; Si 0.016659; Ca 0.190007",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.6
+    },
+    {
+      "Name": "Rock, Sandstone",
+      "Composition": "C 0.00148; O 0.654711; Na 0.006472; Mg 0.001355; Al 0.015468; Si 0.30491; P 3e-06; K 0.007027; Ca 0.004532; Ti 8.5e-05; Fe 0.003956; Mn 1e-06",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.37
+    },
+    {
+      "Name": "Rock, Shale",
+      "Composition": "H 0.029417; C 0.031447; O 0.607866; Na 0.003719; Mg 0.004942; Al 0.053784; Si 0.225978; P 4.1e-05; S 0.00611; K 0.008792; Ca 0.014705; Ti 0.001096; Fe 0.012089; Mn 1.3e-05",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.6
+    },
+    {
+      "Name": "Rubber, Butyl",
+      "Composition": "H 0.666667; C 0.333333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.92,
+      "Chemical Formula": "C4H8"
+    },
+    {
+      "Name": "Rubber, Natural",
+      "Composition": "H 0.615385; C 0.384615",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.92,
+      "Chemical Formula": "C5H8"
+    },
+    {
+      "Name": "Rubber, Neoprene",
+      "Composition": "H 0.500001; C 0.4; Cl 0.1",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.23,
+      "Chemical Formula": "C4H5Cl"
+    },
+    {
+      "Name": "Rubber, Silicon",
+      "Composition": "H 0.597028; C 0.199364; O 0.104172; Si 0.099437",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.0185
+    },
+    {
+      "Name": "Salt Water (T=0 C)",
+      "Composition": "H 0.62115; O 0.310588; Na 0.03413; Cl 0.034131",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.209865
+    },
+    {
+      "Name": "Salt Water (T=20 C)",
+      "Composition": "H 0.661897; O 0.330961; Na 0.003571; Cl 0.003571",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.022394
+    },
+    {
+      "Name": "Sand",
+      "Composition": "H 0.135402; C 0.004874; O 0.583891; Na 0.012932; Al 0.022215; Si 0.226487; K 0.005179; Ca 0.004874; Fe 0.004146",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 1.7
+    },
+    {
+      "Name": "Sea Water, Simple Artificial",
+      "Composition": "H 0.661583; O 0.331501; Na 0.002897; Mg 0.000326; S 0.000174; Cl 0.003392; K 6.3e-05; Ca 6.4e-05",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.023343
+    },
+    {
+      "Name": "Sea Water, Standard",
+      "Composition": "H 0.661559; B 3e-06; C 1.2e-05; O 0.331526; F 0; Na 0.002897; Mg 0.000326; S 0.000174; Cl 0.003371; K 6.3e-05; Ca 6.3e-05; Br 6e-06; Sr 0",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.023343
+    },
+    {
+      "Name": "Sepiolite",
+      "Composition": "H 0.297872; O 0.489362; Mg 0.085106; Si 0.12766",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.14,
+      "Chemical Formula": "Mg4Si6O23H14"
+    },
+    {
+      "Name": "Silciate Yttrium - 0.5 atom% Cerium",
+      "Composition": "Y 0.142173; S 0.214332; O 0.642994; Ce 0.0005",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.5
+    },
+    {
+      "Name": "Silicon",
+      "Composition": "Si 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 2.33,
+      "Chemical Formula": "Si"
+    },
+    {
+      "Name": "Silicon Carbide (hexagonal)",
+      "Composition": "C 0.5; Si 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 3.21,
+      "Chemical Formula": "SiC"
+    },
+    {
+      "Name": "Silicon Dioxide (Alpha-quartz)",
+      "Composition": "O 0.666667; Si 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.648,
+      "Chemical Formula": "SiO2"
+    },
+    {
+      "Name": "Silicon Dioxide (Silica)",
+      "Composition": "O 0.666667; Si 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.32,
+      "Chemical Formula": "SiO2"
+    },
+    {
+      "Name": "Silver",
+      "Composition": "Ag 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 10.5,
+      "Chemical Formula": "Ag"
+    },
+    {
+      "Name": "Skin (ICRP)",
+      "Composition": "H 0.619958; C 0.118062; N 0.020589; O 0.240355; Na 1.9e-05; Mg 1.5e-05; P 6.6e-05; S 0.000308; Cl 0.000467; K 0.000135; Ca 2.3e-05; Fe 1e-06; Zn 1e-06",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.1
+    },
+    {
+      "Name": "Sodium",
+      "Composition": "Na 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.971,
+      "Chemical Formula": "Na"
+    },
+    {
+      "Name": "Sodium Bismuth Tungstate (NBWO)",
+      "Composition": "O 0.666667; Na 0.083333; W 0.166667; Bi 0.083333",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 7.57,
+      "Chemical Formula": "NaBiW2O8"
+    },
+    {
+      "Name": "Sodium Chloride",
+      "Composition": "Na 0.5; Cl 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.17,
+      "Chemical Formula": "NaCl"
+    },
+    {
+      "Name": "Sodium Iodide - 0.2 wt% Thalium Doped",
+      "Composition": "Na 0.4995; I 0.499501; Tl 0.000999",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 3.667
+    },
+    {
+      "Name": "Sodium Iodide with 8 wt% Lithium - 0.10 wt% Thalium doped",
+      "Composition": "I 0.474211; Na 0.438678; Li 0.086672; Tl 0.000439",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 3.66
+    },
+    {
+      "Name": "Sodium Nitrate",
+      "Composition": "N 0.2; O 0.6; Na 0.2",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.261,
+      "Chemical Formula": "NaNO3"
+    },
+    {
+      "Name": "Sodium Oxide",
+      "Composition": "O 0.333333; Na 0.666667",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 2.27,
+      "Chemical Formula": "Na2O"
+    },
+    {
+      "Name": "Steel, Boron Stainless",
+      "Composition": "Cr 0.196075; Ni 0.118895; B 0.056685; C 0.002181; N 0.000374; P 3.4e-05; S 4.9e-05; Co 0.000267; Si 0.012871; Mn 0.018214; Fe 0.594355",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.87
+    },
+    {
+      "Name": "Steel, HT9 Stainless",
+      "Composition": "C 0.009637; N 0.000236; Al 0.000613; Si 0.004121; P 0.000142; S 5.2e-05; Ti 0.000115; V 0.00357; Cr 0.125077; Mn 0.005016; Fe 0.839996; Ni 0.004789; Mo 0.005916; W 0.00072",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.874
+    },
+    {
+      "Name": "Steel, High Carbon (1095)",
+      "Composition": "C 0.046122; Mn 0.004895; P 0.000695; S 0.000839; Fe 0.947449",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.872
+    },
+    {
+      "Name": "Steel, Low Carbon (1008)",
+      "Composition": "C 0.004629; Mn 0.00506; P 0.000718; S 0.000867; Fe 0.988726",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.872
+    },
+    {
+      "Name": "Steel, Medium Carbon (1045)",
+      "Composition": "C 0.022813; Mn 0.008977; P 0.000708; S 0.000854; Fe 0.966648",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.872
+    },
+    {
+      "Name": "Steel, Stainless 202",
+      "Composition": "C 0.006733; Mn 0.085864; P 0.001044; S 0.000504; Si 0.019196; Cr 0.186629; Ni 0.045926; N 0.009622; Fe 0.644482",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.86
+    },
+    {
+      "Name": "Steel, Stainless 302",
+      "Composition": "C 0.006783; Mn 0.019772; P 0.000789; S 0.000508; Si 0.019339; Cr 0.188019; Ni 0.083282; N 0.003877; Fe 0.67763",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.86
+    },
+    {
+      "Name": "Steel, Stainless 304",
+      "Composition": "C 0.003635; Mn 0.01987; P 0.000793; S 0.000511; Si 0.019434; Cr 0.199443; Ni 0.088343; Fe 0.667971",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.03
+    },
+    {
+      "Name": "Steel, Stainless 304L",
+      "Composition": "C 0.003635; Mn 0.01987; P 0.000793; S 0.000511; Si 0.019434; Cr 0.199443; Ni 0.088343; Fe 0.667971",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.0
+    },
+    {
+      "Name": "Steel, Stainless 316",
+      "Composition": "C 0.003683; Mn 0.020128; P 0.000803; S 0.000517; Si 0.019687; Cr 0.180771; Ni 0.113043; Mo 0.014406; Fe 0.646962",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.0
+    },
+    {
+      "Name": "Steel, Stainless 316L",
+      "Composition": "C 0.001384; Mn 0.020165; P 0.000805; S 0.000518; Si 0.019722; Cr 0.181098; Ni 0.113247; Mo 0.014432; Fe 0.648629",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.0
+    },
+    {
+      "Name": "Steel, Stainless 321",
+      "Composition": "C 0.00364; Mn 0.019894; P 0.000794; S 0.000511; Si 0.019457; Cr 0.189172; Ni 0.097759; Fe 0.668773",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.0
+    },
+    {
+      "Name": "Steel, Stainless 347",
+      "Composition": "C 0.003653; Mn 0.019968; P 0.000797; S 0.000513; Si 0.01953; Cr 0.189877; Ni 0.098123; Nb 0.005609; Fe 0.66193",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 8.0
+    },
+    {
+      "Name": "Steel, Stainless 409",
+      "Composition": "C 0.001367; Mn 0.009961; P 0.000707; S 0.000341; Si 0.019484; Cr 0.116819; Ni 0.004662; N 0.001172; Ti 0.004916; Nb 0.001001; Fe 0.83957",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.8
+    },
+    {
+      "Name": "Steel, Stainless 440A",
+      "Composition": "C 0.030043; Mn 0.00973; P 0.00069; S 0.0005; Si 0.019034; Cr 0.174775; Mo 0.004178; Fe 0.76105",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.8
+    },
+    {
+      "Name": "Steel, Stainless 440B",
+      "Composition": "C 0.037602; Mn 0.009671; P 0.000686; S 0.000497; Si 0.018918; Cr 0.173713; Mo 0.004153; Fe 0.75476",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.8
+    },
+    {
+      "Name": "Steel, Stainless 440C",
+      "Composition": "C 0.047087; Mn 0.009576; P 0.000679; S 0.000492; Si 0.018732; Cr 0.172001; Mo 0.004112; Fe 0.747321",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 7.8
+    },
+    {
+      "Name": "Sterotex",
+      "Composition": "H 0.635838; C 0.32948; O 0.034682",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.862,
+      "Chemical Formula": "C57O6H110"
+    },
+    {
+      "Name": "Stilbene (trans-stilbene isomer)",
+      "Composition": "H 0.461538; C 0.538462",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 0.9707,
+      "Chemical Formula": "C14H12"
+    },
+    {
+      "Name": "Strontium Iodide - 2.5 atom% Europium doped",
+      "Composition": "Sr 0.330509; I 0.661017; Eu 0.008475",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.59
+    },
+    {
+      "Name": "Sulfuric acid",
+      "Composition": "H 0.285714; S 0.142857; O 0.571428",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.84,
+      "Chemical Formula": "H2SO4"
+    },
+    {
+      "Name": "Sulphur",
+      "Composition": "S 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 2.0,
+      "Chemical Formula": "S"
+    },
+    {
+      "Name": "TLYC",
+      "Composition": "Tl 0.2; Li 0.1; Y 0.1; Cl 0.6",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.58,
+      "Chemical Formula": "Tl2LiYCl6"
+    },
+    {
+      "Name": "Tantalum",
+      "Composition": "Ta 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 16.654,
+      "Chemical Formula": "Ta"
+    },
+    {
+      "Name": "Thorium",
+      "Composition": "Th 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 11.72,
+      "Chemical Formula": "Th"
+    },
+    {
+      "Name": "Thorium Dioxide",
+      "Composition": "O 0.666667; Th 0.333333",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 9.7,
+      "Chemical Formula": "ThO2"
+    },
+    {
+      "Name": "Tin",
+      "Composition": "Sn 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 7.31,
+      "Chemical Formula": "Sn"
+    },
+    {
+      "Name": "Tissue Equivalent, MS20",
+      "Composition": "H 0.546349; C 0.329488; N 0.008618; O 0.079014; Mg 0.036358; Cl 0.000172",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.0
+    },
+    {
+      "Name": "Tissue Equivalent-Gas, methane based (TEG: MB)",
+      "Composition": "H 0.60524; C 0.22746; N 0.015038; O 0.152262",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.001064
+    },
+    {
+      "Name": "Tissue Equivalent-Gas, propane based (TEG: PB)",
+      "Composition": "H 0.598943; C 0.278538; N 0.014703; O 0.107817",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.001826
+    },
+    {
+      "Name": "Tissue, Adipose (ICRP)",
+      "Composition": "H 0.634632; C 0.284071; N 0.003046; O 0.077749; Na 0.000116; Mg 4e-06; P 2.8e-05; S 0.000122; Cl 0.00018; K 4.4e-05; Ca 3e-06; Fe 2e-06; Zn 2e-06",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 0.92
+    },
+    {
+      "Name": "Tissue, Breast",
+      "Composition": "H 0.625772; C 0.164488; N 0.012745; O 0.196005; Na 0.000259; P 0.000192; S 0.000371; Cl 0.000168",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.02
+    },
+    {
+      "Name": "Tissue, Lung (ICRP)",
+      "Composition": "H 0.633127; C 0.053676; N 0.012889; O 0.298166; Na 0.000504; Mg 0.000189; P 0.000163; S 0.000442; Cl 0.000473; K 0.000313; Ca 1.4e-05; Fe 4.2e-05; Zn 1e-06",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.05
+    },
+    {
+      "Name": "Tissue, Ovary",
+      "Composition": "H 0.643223; C 0.047812; N 0.010581; O 0.296401; Na 0.000537; P 0.000399; S 0.000385; Cl 0.000348; K 0.000316",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.05
+    },
+    {
+      "Name": "Tissue, Soft (ICRP)",
+      "Composition": "H 0.630445; C 0.117591; N 0.010804; O 0.239606; Na 0.000299; Mg 3.3e-05; P 0.000261; S 0.000377; Cl 0.00023; K 0.00031; Ca 3.5e-05; Fe 5e-06; Zn 3e-06",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.0
+    },
+    {
+      "Name": "Tissue, Soft (ICRU four component)",
+      "Composition": "H 0.630928; C 0.058093; N 0.011668; O 0.299311",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.0
+    },
+    {
+      "Name": "Tissue, Testes (ICRP)",
+      "Composition": "H 0.641353; C 0.047678; N 0.008835; O 0.300187; Na 0.00061; Mg 2.8e-05; P 0.00025; S 0.000283; Cl 0.000428; K 0.00033; Ca 1.5e-05; Fe 2e-06; Zn 2e-06",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.04
+    },
+    {
+      "Name": "Tissue, Testis (ICRU)",
+      "Composition": "H 0.64517; C 0.050569; N 0.00876; O 0.293727; Na 0.000534; P 0.000198; S 0.000383; Cl 0.000346; K 0.000314",
+      "FractionType": "Atom",
+      "Category": "Biological & Tissue-Equivalent",
+      "Density": 1.04
+    },
+    {
+      "Name": "Titanium",
+      "Composition": "Ti 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 4.54,
+      "Chemical Formula": "Ti"
+    },
+    {
+      "Name": "Titanium Dioxide",
+      "Composition": "O 0.666667; Ti 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 4.26,
+      "Chemical Formula": "TiO2"
+    },
+    {
+      "Name": "Titanium Hydride",
+      "Composition": "H 0.666667; Ti 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 3.75,
+      "Chemical Formula": "TiH2"
+    },
+    {
+      "Name": "Titanium alloy, grade 5",
+      "Composition": "C 0.003011; O 0.005651; N 0.001614; H 0.006727; Fe 0.003238; Al 0.10261; V 0.035493; Ti 0.841657",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 4.43
+    },
+    {
+      "Name": "Toluene",
+      "Composition": "H 0.533333; C 0.466667",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.8669,
+      "Chemical Formula": "C7H8"
+    },
+    {
+      "Name": "Tributyl Borate",
+      "Composition": "H 0.627907; B 0.023256; C 0.27907; O 0.069768",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.8567,
+      "Chemical Formula": "BO3C12H27"
+    },
+    {
+      "Name": "Tributyl Phosphate (TBP)",
+      "Composition": "H 0.613638; C 0.272727; O 0.090909; P 0.022727",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.978,
+      "Chemical Formula": "C12H27PO4"
+    },
+    {
+      "Name": "Tungsten",
+      "Composition": "W 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 19.3,
+      "Chemical Formula": "W"
+    },
+    {
+      "Name": "Uranium Carbide",
+      "Composition": "C 0.5; U 0.500001",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 13.63,
+      "Chemical Formula": "UC"
+    },
+    {
+      "Name": "Uranium Dicarbide",
+      "Composition": "C 0.666667; U 0.333332",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 11.28,
+      "Chemical Formula": "UC2"
+    },
+    {
+      "Name": "Uranium Dioxide",
+      "Composition": "O 0.666667; U 0.333332",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 10.96,
+      "Chemical Formula": "UO2"
+    },
+    {
+      "Name": "Uranium Hexafluoride",
+      "Composition": "F 0.857143; U 0.142858",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 5.09,
+      "Chemical Formula": "UF6"
+    },
+    {
+      "Name": "Uranium Hydride",
+      "Composition": "H 0.75; U 0.25",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 11.1,
+      "Chemical Formula": "UH3"
+    },
+    {
+      "Name": "Uranium Nitride",
+      "Composition": "N 0.5; U 0.500001",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 14.31,
+      "Chemical Formula": "UN"
+    },
+    {
+      "Name": "Uranium Oxide",
+      "Composition": "O 0.727272; U 0.272727",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 8.38,
+      "Chemical Formula": "U3O8"
+    },
+    {
+      "Name": "Uranium Tetrafluoride",
+      "Composition": "F 0.8; U 0.199999",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 6.7,
+      "Chemical Formula": "UF4"
+    },
+    {
+      "Name": "Uranium Trioxide",
+      "Composition": "O 0.75; U 0.25",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 7.29,
+      "Chemical Formula": "UO3"
+    },
+    {
+      "Name": "Uranium, Depleted, Typical",
+      "Composition": "U 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 18.95,
+      "Chemical Formula": "U"
+    },
+    {
+      "Name": "Uranium, Enriched, Typical Commercial",
+      "Composition": "U 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 18.944,
+      "Chemical Formula": "U"
+    },
+    {
+      "Name": "Uranium, HEU, Health Physics Society",
+      "Composition": "U 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 18.724,
+      "Chemical Formula": "U"
+    },
+    {
+      "Name": "Uranium, HEU, Russian Average",
+      "Composition": "U 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 18.732,
+      "Chemical Formula": "U"
+    },
+    {
+      "Name": "Uranium, HEU, US Average",
+      "Composition": "U 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 18.724,
+      "Chemical Formula": "U"
+    },
+    {
+      "Name": "Uranium, Low Enriched (LEU)",
+      "Composition": "U 0.999999",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 18.944,
+      "Chemical Formula": "U"
+    },
+    {
+      "Name": "Uranium, Natural (NU)",
+      "Composition": "U 1",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 18.95,
+      "Chemical Formula": "U"
+    },
+    {
+      "Name": "Uranium-Plutonium, Mixed Oxide (MOX)",
+      "Composition": "O 0.666667; Pu 0.015474; U 0.317861",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 11.0
+    },
+    {
+      "Name": "Uranyl Fluoride",
+      "Composition": "O 0.4; F 0.4; U 0.199999",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 6.37,
+      "Chemical Formula": "UO2F2"
+    },
+    {
+      "Name": "Uranyl Nitrate",
+      "Composition": "N 0.181818; O 0.727272; U 0.09091",
+      "FractionType": "Atom",
+      "Category": "Nuclear Fuel & Actinides",
+      "Density": 2.81,
+      "Chemical Formula": "UN2O8"
+    },
+    {
+      "Name": "Vermiculite, Exfoliated",
+      "Composition": "H 0.197174; O 0.520978; Mg 0.092157; Al 0.039305; Si 0.11341; K 0.009307; Ca 0.006852; Ti 0.003457; Fe 0.017361",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.085
+    },
+    {
+      "Name": "Viton Fluoroelastomer",
+      "Composition": "H 0.133322; C 0.333345; F 0.533333",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.8
+    },
+    {
+      "Name": "Water, Heavy",
+      "Composition": "H 0.666667; O 0.333333",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 1.1044,
+      "Chemical Formula": "H2O"
+    },
+    {
+      "Name": "Water, Liquid",
+      "Composition": "H 0.666667; O 0.333333",
+      "FractionType": "Atom",
+      "Category": "Liquids",
+      "Density": 0.997,
+      "Chemical Formula": "H2O"
+    },
+    {
+      "Name": "Water, Vapor",
+      "Composition": "H 0.666667; O 0.333333",
+      "FractionType": "Atom",
+      "Category": "Gases",
+      "Density": 0.000756182,
+      "Chemical Formula": "H2O"
+    },
+    {
+      "Name": "Wax, M3",
+      "Composition": "H 0.632195; C 0.304374; O 0.032117; Mg 0.030913; Ca 0.000401",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.05
+    },
+    {
+      "Name": "Wax, Mix D",
+      "Composition": "H 0.658872; C 0.320928; O 0.010845; Mg 0.007867; Ti 0.001489",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.99
+    },
+    {
+      "Name": "Wax, Paraffin",
+      "Composition": "H 0.675325; C 0.324675",
+      "FractionType": "Atom",
+      "Category": "Polymers & Organic Solids",
+      "Density": 0.812,
+      "Chemical Formula": "C25H52"
+    },
+    {
+      "Name": "Wood (Southern Pine)",
+      "Composition": "H 0.462413; C 0.323396; N 0.002773; O 0.208782; Mg 0.000639; S 0.001211; K 0.000397; Ca 0.000388",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 0.64
+    },
+    {
+      "Name": "Xenon",
+      "Composition": "Xe 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 0.00548536,
+      "Chemical Formula": "Xe"
+    },
+    {
+      "Name": "Yttrium Aluminum Oxide - 1 atom% Cerium",
+      "Composition": "O 0.4; Al 0.5; Y 0.1",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.56
+    },
+    {
+      "Name": "Yttrium Aluminum Perovslite - 0.5 atom% Cerium",
+      "Composition": "Y 0.199; Al 0.597; O 0.199; Ce 0.005001",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.4
+    },
+    {
+      "Name": "Zeolite (Natrolite)",
+      "Composition": "H 0.173913; O 0.521738; Na 0.086957; Al 0.086957; Si 0.130435",
+      "FractionType": "Atom",
+      "Category": "Construction & Geological",
+      "Density": 2.25,
+      "Chemical Formula": "Na2Al2Si3O12H4"
+    },
+    {
+      "Name": "Zinc",
+      "Composition": "Zn 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 7.133,
+      "Chemical Formula": "Zn"
+    },
+    {
+      "Name": "Zinc Selenide",
+      "Composition": "Zn 0.5; Se 0.5",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 5.27,
+      "Chemical Formula": "ZnSe"
+    },
+    {
+      "Name": "Zinc Sulfide",
+      "Composition": "S 0.5; Zn 0.5",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.09,
+      "Chemical Formula": "ZnS"
+    },
+    {
+      "Name": "Zircaloy-2",
+      "Composition": "O 0.006798; Cr 0.001742; Fe 0.001622; Ni 0.000772; Zr 0.97838; Sn 0.010686",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 6.56
+    },
+    {
+      "Name": "Zircaloy-4",
+      "Composition": "O 0.006791; Cr 0.001741; Fe 0.003242; Zr 0.977549; Sn 0.010677",
+      "FractionType": "Atom",
+      "Category": "Alloys",
+      "Density": 6.56
+    },
+    {
+      "Name": "Zirconium",
+      "Composition": "Zr 1",
+      "FractionType": "Atom",
+      "Category": "Elements",
+      "Density": 6.52,
+      "Chemical Formula": "Zr"
+    },
+    {
+      "Name": "Zirconium Hydride (Zr5H8)",
+      "Composition": "H 0.615385; Zr 0.384616",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 5.61,
+      "Chemical Formula": "Zr5H8"
+    },
+    {
+      "Name": "Zirconium Hydride (ZrH2)",
+      "Composition": "H 0.666667; Zr 0.333333",
+      "FractionType": "Atom",
+      "Category": "Inorganic Compounds",
+      "Density": 5.6,
+      "Chemical Formula": "ZrH2"
+    },
+    {
+      "Name": "ZnS(Ag):LiF 95wt% 6Li PHOSPHOR POWDER Neutron Detectors",
+      "Composition": "Zn 0.439541; S 0.439541; F 0.060459; Li 0.060459",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.09
+    },
+    {
+      "Name": "ZnS:Ag PHOSPHOR POWDER EJ-600 for Neutron Detectors",
+      "Composition": "Zn 0.5; S 0.5",
+      "FractionType": "Atom",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 4.09,
+      "Chemical Formula": "ZnS"
+    }
+  ]
+}

@@ -1,0 +1,944 @@
+{
+  "Metadata": {
+    "DocumentCode": "NIST-SRD-124",
+    "Citation": "NIST Standard Reference Database 124. https://dx.doi.org/10.18434/T4NC7P"
+  },
+  "Materials": [
+    {
+      "Name": "Fluorine",
+      "Composition": "F 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 0.00158,
+      "Chemical Formula": "F"
+    },
+    {
+      "Name": "Phosphorus",
+      "Composition": "P 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 2.2,
+      "Chemical Formula": "P"
+    },
+    {
+      "Name": "Chlorine",
+      "Composition": "Cl 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 0.002995,
+      "Chemical Formula": "Cl"
+    },
+    {
+      "Name": "Potassium",
+      "Composition": "K 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 0.862,
+      "Chemical Formula": "K"
+    },
+    {
+      "Name": "Calcium",
+      "Composition": "Ca 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 1.55,
+      "Chemical Formula": "Ca"
+    },
+    {
+      "Name": "Scandium",
+      "Composition": "Sc 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 2.989,
+      "Chemical Formula": "Sc"
+    },
+    {
+      "Name": "Vanadium",
+      "Composition": "V 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 6.11,
+      "Chemical Formula": "V"
+    },
+    {
+      "Name": "Manganese",
+      "Composition": "Mn 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 7.44,
+      "Chemical Formula": "Mn"
+    },
+    {
+      "Name": "Cobalt",
+      "Composition": "Co 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 8.9,
+      "Chemical Formula": "Co"
+    },
+    {
+      "Name": "Gallium",
+      "Composition": "Ga 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 5.904,
+      "Chemical Formula": "Ga"
+    },
+    {
+      "Name": "Arsenic",
+      "Composition": "As 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 5.73,
+      "Chemical Formula": "As"
+    },
+    {
+      "Name": "Selenium",
+      "Composition": "Se 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 4.5,
+      "Chemical Formula": "Se"
+    },
+    {
+      "Name": "Bromine",
+      "Composition": "Br 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 0.007072,
+      "Chemical Formula": "Br"
+    },
+    {
+      "Name": "Rubidium",
+      "Composition": "Rb 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 1.532,
+      "Chemical Formula": "Rb"
+    },
+    {
+      "Name": "Strontium",
+      "Composition": "Sr 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 2.54,
+      "Chemical Formula": "Sr"
+    },
+    {
+      "Name": "Yttrium",
+      "Composition": "Y 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 4.469,
+      "Chemical Formula": "Y"
+    },
+    {
+      "Name": "Technetium",
+      "Composition": "Tc 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 11.5,
+      "Chemical Formula": "Tc"
+    },
+    {
+      "Name": "Ruthenium",
+      "Composition": "Ru 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 12.41,
+      "Chemical Formula": "Ru"
+    },
+    {
+      "Name": "Rhodium",
+      "Composition": "Rh 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 12.41,
+      "Chemical Formula": "Rh"
+    },
+    {
+      "Name": "Antimony",
+      "Composition": "Sb 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 6.691,
+      "Chemical Formula": "Sb"
+    },
+    {
+      "Name": "Tellurium",
+      "Composition": "Te 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 6.24,
+      "Chemical Formula": "Te"
+    },
+    {
+      "Name": "Iodine",
+      "Composition": "I 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 4.93,
+      "Chemical Formula": "I"
+    },
+    {
+      "Name": "Cesium",
+      "Composition": "Cs 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 1.873,
+      "Chemical Formula": "Cs"
+    },
+    {
+      "Name": "Barium",
+      "Composition": "Ba 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 3.5,
+      "Chemical Formula": "Ba"
+    },
+    {
+      "Name": "Lanthanum",
+      "Composition": "La 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 6.154,
+      "Chemical Formula": "La"
+    },
+    {
+      "Name": "Cerium",
+      "Composition": "Ce 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 6.657,
+      "Chemical Formula": "Ce"
+    },
+    {
+      "Name": "Praseodymium",
+      "Composition": "Pr 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 6.71,
+      "Chemical Formula": "Pr"
+    },
+    {
+      "Name": "Neodymium",
+      "Composition": "Nd 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 6.9,
+      "Chemical Formula": "Nd"
+    },
+    {
+      "Name": "Promethium",
+      "Composition": "Z61 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 7.22,
+      "Chemical Formula": "Pm"
+    },
+    {
+      "Name": "Samarium",
+      "Composition": "Sm 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 7.46,
+      "Chemical Formula": "Sm"
+    },
+    {
+      "Name": "Europium",
+      "Composition": "Eu 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 5.243,
+      "Chemical Formula": "Eu"
+    },
+    {
+      "Name": "Terbium",
+      "Composition": "Tb 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 8.229,
+      "Chemical Formula": "Tb"
+    },
+    {
+      "Name": "Dysprosium",
+      "Composition": "Dy 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 8.55,
+      "Chemical Formula": "Dy"
+    },
+    {
+      "Name": "Holmium",
+      "Composition": "Ho 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 8.795,
+      "Chemical Formula": "Ho"
+    },
+    {
+      "Name": "Erbium",
+      "Composition": "Er 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 9.066,
+      "Chemical Formula": "Er"
+    },
+    {
+      "Name": "Thulium",
+      "Composition": "Tm 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 9.321,
+      "Chemical Formula": "Tm"
+    },
+    {
+      "Name": "Ytterbium",
+      "Composition": "Yb 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 6.73,
+      "Chemical Formula": "Yb"
+    },
+    {
+      "Name": "Lutetium",
+      "Composition": "Lu 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 9.84,
+      "Chemical Formula": "Lu"
+    },
+    {
+      "Name": "Hafnium",
+      "Composition": "Hf 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 13.31,
+      "Chemical Formula": "Hf"
+    },
+    {
+      "Name": "Rhenium",
+      "Composition": "Re 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 21.02,
+      "Chemical Formula": "Re"
+    },
+    {
+      "Name": "Osmium",
+      "Composition": "Os 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 22.57,
+      "Chemical Formula": "Os"
+    },
+    {
+      "Name": "Iridium",
+      "Composition": "Ir 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 22.42,
+      "Chemical Formula": "Ir"
+    },
+    {
+      "Name": "Thallium",
+      "Composition": "Tl 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 11.72,
+      "Chemical Formula": "Tl"
+    },
+    {
+      "Name": "Polonium",
+      "Composition": "Po 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 9.32,
+      "Chemical Formula": "Po"
+    },
+    {
+      "Name": "Astatine",
+      "Composition": "At 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 9.32,
+      "Chemical Formula": "At"
+    },
+    {
+      "Name": "Radon",
+      "Composition": "Rn 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 0.009066,
+      "Chemical Formula": "Rn"
+    },
+    {
+      "Name": "Francium",
+      "Composition": "Fr 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 1.0,
+      "Chemical Formula": "Fr"
+    },
+    {
+      "Name": "Radium",
+      "Composition": "Ra 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 5.0,
+      "Chemical Formula": "Ra"
+    },
+    {
+      "Name": "Actinium",
+      "Composition": "Ac 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 10.07,
+      "Chemical Formula": "Ac"
+    },
+    {
+      "Name": "Protactinium",
+      "Composition": "Pa 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 15.37,
+      "Chemical Formula": "Pa"
+    },
+    {
+      "Name": "Uranium",
+      "Composition": "U 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 18.95,
+      "Chemical Formula": "U"
+    },
+    {
+      "Name": "Neptunium",
+      "Composition": "Np 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 20.25,
+      "Chemical Formula": "Np"
+    },
+    {
+      "Name": "Plutonium",
+      "Composition": "Pu 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 19.84,
+      "Chemical Formula": "Pu"
+    },
+    {
+      "Name": "Americium",
+      "Composition": "Z95 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 13.67,
+      "Chemical Formula": "Am"
+    },
+    {
+      "Name": "Curium",
+      "Composition": "Z96 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 13.51,
+      "Chemical Formula": "Cm"
+    },
+    {
+      "Name": "Berkelium",
+      "Composition": "Z97 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 14.0,
+      "Chemical Formula": "Bk"
+    },
+    {
+      "Name": "Californium",
+      "Composition": "Z98 1",
+      "FractionType": "Weight",
+      "Category": "Elements",
+      "Density": 10.0,
+      "Chemical Formula": "Cf"
+    },
+    {
+      "Name": "Adenine",
+      "Composition": "H 0.037294; C 0.44443; N 0.518275",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.35,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Amber",
+      "Composition": "H 0.10593; C 0.788973; O 0.105096",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.1,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Aniline",
+      "Composition": "H 0.075759; C 0.773838; N 0.150403",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.0235,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Butane",
+      "Composition": "H 0.173408; C 0.826592",
+      "FractionType": "Weight",
+      "Category": "Gases",
+      "Density": 0.002493,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "N-Butyl Alcohol",
+      "Composition": "H 0.135978; C 0.648171; O 0.215851",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.8098,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Cellulose Acetate, Cellophane",
+      "Composition": "H 0.062162; C 0.444462; O 0.493376",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.42,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Cellulose Acetate Butyrate",
+      "Composition": "H 0.067125; C 0.545403; O 0.387472",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.2,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Cellulose Nitrate",
+      "Composition": "H 0.029216; C 0.271296; N 0.121276; O 0.578212",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.49,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Cesium Fluoride",
+      "Composition": "F 0.125069; Cs 0.874931",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 4.115,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Chlorobenzene",
+      "Composition": "H 0.044772; C 0.640254; Cl 0.314974",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.1058,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Chloroform",
+      "Composition": "H 0.008443; C 0.100613; Cl 0.890944",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.4832,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Cyclohexane",
+      "Composition": "H 0.143711; C 0.856289",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.779,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "1,2-Dichlorobenzene",
+      "Composition": "H 0.027425; C 0.490233; Cl 0.482342",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.3048,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Dichlorodiethyl Ether",
+      "Composition": "H 0.056381; C 0.335942; O 0.111874; Cl 0.495802",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.2199,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "1,2-Dichloroethane",
+      "Composition": "H 0.04074; C 0.242746; Cl 0.716515",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.2351,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Diethyl Ether",
+      "Composition": "H 0.135978; C 0.648171; O 0.215851",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.71378,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "N,N-Dimethyl Formamide",
+      "Composition": "H 0.096523; C 0.492965; N 0.191625; O 0.218887",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.9487,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Dimethyl Sulfoxide",
+      "Composition": "H 0.077403; C 0.307467; O 0.204782; S 0.410348",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.1014,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Ethyl Cellulose",
+      "Composition": "H 0.090027; C 0.585182; O 0.324791",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.13,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Ferrous Oxide",
+      "Composition": "O 0.222689; Fe 0.777311",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 5.7,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Glucose",
+      "Composition": "H 0.071204; C 0.363652; O 0.565144",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.54,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Glutamine",
+      "Composition": "H 0.068965; C 0.410926; N 0.191681; O 0.328427",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.46,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Guanine",
+      "Composition": "H 0.033346; C 0.39738; N 0.463407; O 0.105867",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.58,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "N-Heptane",
+      "Composition": "H 0.160937; C 0.839063",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.68376,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "N-Hexane",
+      "Composition": "H 0.163741; C 0.836259",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.6603,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Lanthanum Oxybromide",
+      "Composition": "O 0.068138; Br 0.340294; La 0.591568",
+      "FractionType": "Weight",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.28,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Lanthanum Oxysulfide",
+      "Composition": "O 0.0936; S 0.093778; La 0.812622",
+      "FractionType": "Weight",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 5.86,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Lead Oxide",
+      "Composition": "O 0.071682; Pb 0.928318",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 9.53,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Lithium Carbonate",
+      "Composition": "Li 0.187871; C 0.16255; O 0.649579",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 2.11,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Magnesium Carbonate",
+      "Composition": "C 0.142455; O 0.569278; Mg 0.288267",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 2.958,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Magnesium Fluoride",
+      "Composition": "F 0.609883; Mg 0.390117",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 3.0,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Naphthalene",
+      "Composition": "H 0.062909; C 0.937091",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.145,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Nitrobenzene",
+      "Composition": "H 0.040935; C 0.585374; N 0.113773; O 0.259918",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.19867,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Nitrous Oxide",
+      "Composition": "N 0.636483; O 0.363517",
+      "FractionType": "Weight",
+      "Category": "Gases",
+      "Density": 0.001831,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Octane, Liquid",
+      "Composition": "H 0.158821; C 0.841179",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.7026,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "N-Pentane",
+      "Composition": "H 0.167635; C 0.832365",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.6262,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Polyacrylonitrile",
+      "Composition": "H 0.056983; C 0.679056; N 0.263962",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.17,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Polychlorostyrene",
+      "Composition": "H 0.061869; C 0.696325; Cl 0.241806",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.3,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Polyoxymethylene",
+      "Composition": "H 0.067135; C 0.400017; O 0.532848",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.425,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Polytrifluorochloroethylene",
+      "Composition": "C 0.20625; F 0.489354; Cl 0.304395",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 2.1,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Polyvinyl Alcohol",
+      "Composition": "H 0.091517; C 0.545298; O 0.363185",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.3,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Polyvinyl Butyral",
+      "Composition": "H 0.092802; C 0.680561; O 0.226637",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.12,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Polyvinylidene Fluoride",
+      "Composition": "H 0.03148; C 0.375141; F 0.593379",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.76,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Polyvinyl Pyrrolidone",
+      "Composition": "H 0.081616; C 0.648407; N 0.126024; O 0.143953",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.25,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "N-Propyl Alcohol",
+      "Composition": "H 0.134173; C 0.599595; O 0.266232",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.8035,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Pyridine",
+      "Composition": "H 0.06371; C 0.759217; N 0.177073",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.9819,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Silver Bromide",
+      "Composition": "Br 0.425537; Ag 0.574463",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 6.473,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Silver Chloride",
+      "Composition": "Cl 0.247368; Ag 0.752632",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 5.56,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Silver Halides In Photographic Emulsion",
+      "Composition": "Br 0.422895; Ag 0.573748; I 0.003357",
+      "FractionType": "Weight",
+      "Category": "Detector & Scintillator Materials",
+      "Density": 6.47,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Silver Iodide",
+      "Composition": "Ag 0.459458; I 0.540542",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 6.01,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Sodium Carbonate",
+      "Composition": "C 0.113323; O 0.452861; Na 0.433815",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 2.532,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Sucrose",
+      "Composition": "H 0.064779; C 0.42107; O 0.514151",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.5805,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Tetrachloroethylene",
+      "Composition": "C 0.144856; Cl 0.855144",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.625,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Thallium Chloride",
+      "Composition": "Cl 0.147822; Tl 0.852178",
+      "FractionType": "Weight",
+      "Category": "Inorganic Compounds",
+      "Density": 7.004,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Trichloroethylene",
+      "Composition": "H 0.007671; C 0.182831; Cl 0.809498",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.46,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Triethyl Phosphate",
+      "Composition": "H 0.082998; C 0.395628; O 0.351334; P 0.17004",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 1.07,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Tungsten Hexafluoride",
+      "Composition": "F 0.382723; W 0.617277",
+      "FractionType": "Weight",
+      "Category": "Gases",
+      "Density": 2.4,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Urea",
+      "Composition": "H 0.067131; C 0.199999; N 0.466459; O 0.266411",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.323,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Valine",
+      "Composition": "H 0.094641; C 0.512645; N 0.119565; O 0.27315",
+      "FractionType": "Weight",
+      "Category": "Polymers & Organic Solids",
+      "Density": 1.23,
+      "Chemical Formula": ""
+    },
+    {
+      "Name": "Xylene",
+      "Composition": "H 0.094935; C 0.905065",
+      "FractionType": "Weight",
+      "Category": "Liquids",
+      "Density": 0.87,
+      "Chemical Formula": ""
+    }
+  ]
+}

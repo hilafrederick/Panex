@@ -1,0 +1,101 @@
+<UserControl
+    x:Class="Panex.Controls.InteractionFiltersControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Panex.Controls"
+    xmlns:panex="using:Panex"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:layout="using:CommunityToolkit.WinUI.UI.Controls"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <panex:BoolToVisibilityConverter x:Key="BoolToVisConverter"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <layout:WrapPanel Orientation="Horizontal" HorizontalSpacing="24" VerticalSpacing="8" Padding="0,0,10,5" VerticalAlignment="Center">
+
+            <CheckBox Content="Total" IsChecked="{Binding ShowTotal, Mode=TwoWay}" FontWeight="Bold" ToolTipService.ToolTip="Total photon interaction cross-section" Margin="0"/>
+
+                <StackPanel Orientation="Horizontal" Spacing="0" VerticalAlignment="Center">
+                    <CheckBox Content="Photoelectric" IsChecked="{Binding ShowPhotoelectric, Mode=TwoWay}" Foreground="#FF6680" ToolTipService.ToolTip="Photoelectric absorption (C=73)" Margin="0"/>
+
+                    <Button Background="Transparent" BorderThickness="0" MinWidth="0" Padding="6,4" Margin="2,0,0,0" CornerRadius="4" ToolTipService.ToolTip="Filter specific atomic subshells"
+                            Visibility="{Binding HasSubshells, Converter={StaticResource BoolToVisConverter}}">
+                        <FontIcon Glyph="&#xE71C;" FontSize="12"/>
+                        <Button.Flyout>
+                            <Flyout>
+                                <Grid Width="250" MaxHeight="350" Padding="8">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Grid.Row="0" Text="Individual Photoelectric Subshells" FontSize="12" FontWeight="SemiBold" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,8"/>
+
+                                    <CheckBox Grid.Row="1" Content="(Select All)" IsChecked="{Binding IsAllSubshellsSelected, Mode=TwoWay}" Margin="0,0,0,4"/>
+
+                                    <Border Grid.Row="2" Height="1" Background="{ThemeResource SurfaceStrokeColorDefaultBrush}" Margin="0,4,0,8"/>
+
+                                    <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+                                        <ItemsControl ItemsSource="{Binding SubshellOptions}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox Content="{Binding Name}" IsChecked="{Binding IsSelected, Mode=TwoWay}" Margin="0,2"/>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </StackPanel>
+
+                <CheckBox Content="Coherent" IsChecked="{Binding ShowCoherent, Mode=TwoWay}" Foreground="#44DD88" ToolTipService.ToolTip="Rayleigh (coherent) scattering (C=71)" Margin="0"/>
+                <CheckBox Content="Incoherent" IsChecked="{Binding ShowIncoherent, Mode=TwoWay}" Foreground="#4488FF" ToolTipService.ToolTip="Compton (incoherent) scattering (C=72)" Margin="0"/>
+                <CheckBox Content="Pair (Nuclear)" IsChecked="{Binding ShowPair, Mode=TwoWay}" Foreground="#FFAA44" ToolTipService.ToolTip="Pair Production in the Nuclear Field (C=74)" Margin="0"/>
+                <CheckBox Content="Pair (Electron)" IsChecked="{Binding ShowTriplet, Mode=TwoWay}" Foreground="#BB88FF" ToolTipService.ToolTip="Pair Production in the Electron Field / Triplet Production (C=75)" Margin="0"/>
+
+                <StackPanel Orientation="Horizontal" Spacing="0" VerticalAlignment="Center">
+                    <CheckBox Content="Photonuclear" IsChecked="{Binding ShowPhotonuclear, Mode=TwoWay}" Foreground="#00D4FF" ToolTipService.ToolTip="Photonuclear interactions (Total)" Margin="0"/>
+
+                    <Button Background="Transparent" BorderThickness="0" MinWidth="0" Padding="6,4" Margin="2,0,0,0" CornerRadius="4" ToolTipService.ToolTip="Filter specific isotopes">
+                        <FontIcon Glyph="&#xE71C;" FontSize="12"/>
+                        <Button.Flyout>
+                            <Flyout>
+                                <Grid Width="250" MaxHeight="350" Padding="8">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Grid.Row="0" Text="Individual Photonuclear Isotopes" FontSize="12" FontWeight="SemiBold" Foreground="{ThemeResource TextFillColorSecondaryBrush}" Margin="0,0,0,8"/>
+
+                                    <CheckBox Grid.Row="1" Content="(Select All)" IsChecked="{Binding IsAllIsotopesSelected, Mode=TwoWay}" Margin="0,0,0,4"/>
+
+                                    <Border Grid.Row="2" Height="1" Background="{ThemeResource SurfaceStrokeColorDefaultBrush}" Margin="0,4,0,8"/>
+
+                                    <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+                                        <ItemsControl ItemsSource="{Binding IsotopeOptions}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <CheckBox Content="{Binding Name}" IsChecked="{Binding IsSelected, Mode=TwoWay}" Margin="0,2"/>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </ScrollViewer>
+                                </Grid>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                </StackPanel>
+
+        </layout:WrapPanel>
+    </Grid>
+</UserControl>

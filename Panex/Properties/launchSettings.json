@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Panex (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Panex (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
