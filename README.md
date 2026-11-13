@@ -38,9 +38,9 @@ Built with C# (.NET 8) and WinUI 3, Panex brings together **LLNL EPDL (EPICS2025
 
 ## System Requirements
 
-### Running Packaged Releases (`Setup.exe` or `Portable.zip`)
+### Running the Release Installer (`Setup.exe`)
 - **OS:** Windows 10 version 1809 (`10.0.17763.0`) or later / Windows 11 (`x64`)
-- **Runtime:** None required — `.NET 8` and `Windows App SDK 1.8` are bundled self-contained in the release packages (`win-x64`).
+- **Runtime:** None required — `.NET 8` and `Windows App SDK 1.8` are bundled self-contained in the release installer (`win-x64`).
 
 ### Building from Source
 - **SDK:** `.NET 8.0 SDK` (`net8.0-windows10.0.19041.0`)
@@ -51,17 +51,12 @@ Built with C# (.NET 8) and WinUI 3, Panex brings together **LLNL EPDL (EPICS2025
 
 ## Installation
 
-### Option 1 — Windows Installer (`Setup.exe`, Recommended)
+### Option 1 — Windows Installer (`Setup.exe`)
 1. Download `Panex-v<version>-win-x64-Setup.exe` from the [GitHub Releases](https://github.com/hilafrederick/Panex/releases) page.
 2. Run the installer, review and accept the Apache License 2.0 terms, and follow the setup wizard.
-3. Launch **Panex** from the Start Menu or Desktop shortcut (`LICENSE` and `NOTICE` are installed in the application folder).
+3. Launch **Panex** from the Start Menu or Desktop shortcut (`LICENSE` and `NOTICE` are installed in the application folder; custom materials and user preferences are stored per user in `%LOCALAPPDATA%\Panex\`).
 
-### Option 2 — Portable Archive (`Portable.zip`)
-1. Download `Panex-v<version>-win-x64-Portable.zip` from [GitHub Releases](https://github.com/hilafrederick/Panex/releases).
-2. Extract the archive to any folder and run `Panex.exe`.
-3. Saved custom materials and theme preferences are stored per user in `%LOCALAPPDATA%\Panex\`.
-
-### Option 3 — Build from Source
+### Option 2 — Build from Source
 ```powershell
 git clone https://github.com/hilafrederick/Panex.git
 cd Panex
@@ -72,7 +67,7 @@ dotnet build Panex/Panex.csproj -c Release -p:Platform=x64
 # Publish a self-contained x64 build
 dotnet publish Panex/Panex.csproj -c Release -p:PublishProfile=win-x64 -p:WindowsAppSDKSelfContained=true
 ```
-*(Note: If `build/` is included in the repository, running `build\build-release.bat` automates publishing, satellite language trimming, portable ZIP archiving, and Inno Setup compilation into `dist/`.)*
+*(Note: Running `build\build-release.bat` automates self-contained publishing, satellite language trimming, and installer packaging into `dist/` using `build\InnoSetup.iss`.)*
 
 ---
 
