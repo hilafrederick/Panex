@@ -24,8 +24,9 @@ terms, disclaimers, and citation requirements.
   NBSIR-87. Subject to NIST and original author terms and disclaimers.
 
 - JENDL-5 Photonuclear Data (Panex/Data/PN_JENDL5/)
-  Japanese Evaluated Nuclear Data Library, JENDL-5 photonuclear
-  photoabsorption cross sections (MT=3), Japan Atomic Energy Agency (JAEA).
+  Japanese Evaluated Nuclear Data Library, JENDL-5 photonuclear total
+  photoabsorption cross sections (pn_jendl5_xs.csv; 286 nuclides, MT=3 with
+  MT=5 fallback), Japan Atomic Energy Agency (JAEA).
 
 - ANSI/ANS-6.4.3 Buildup Factor Parameters (Panex/Data/ANSI_EBF.csv, ANSI_EABF.csv)
   Geometric Progression (G-P) fitting parameters for exposure buildup factors

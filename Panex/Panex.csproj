@@ -1,4 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <InternalsVisibleTo Include="Panex.Tests" />
+  </ItemGroup>
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
@@ -105,10 +108,9 @@
     <None Update="Data\Material_PNNL-15870-Rev2.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="Data\PN_JENDL5\**\*.*" />
-    <Content Update="Data\PN_JENDL5\**\*.*">
+    <None Update="Data\PN_JENDL5\pn_jendl5_xs.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>
     <Content Include="Data\PA_NIST_XCOM\**\*.*" />
     <Content Update="Data\PA_NIST_XCOM\**\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

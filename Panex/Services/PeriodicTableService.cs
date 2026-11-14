@@ -116,9 +116,15 @@ public partial class PeriodicTableService
         SwitchPhotoatomicLibrary("EPDL");
 
         // Photonuclear (JENDL-5)
-        string pnPath = Path.Combine(appBase, "Data", "PN_JENDL5");
-        if (Directory.Exists(pnPath))
-            _pnService.LoadPhotonuclearData(_elementsByZ.Values, pnPath);
+        string pnUnifiedPath = Path.Combine(appBase, "Data", "PN_JENDL5", PhotonuclearDataService.UnifiedFileName);
+        string pnRootUnifiedPath = Path.Combine(appBase, "Data", PhotonuclearDataService.UnifiedFileName);
+        string pnDirPath = Path.Combine(appBase, "Data", "PN_JENDL5");
+        if (File.Exists(pnUnifiedPath))
+            _pnService.LoadPhotonuclearData(_elementsByZ.Values, pnUnifiedPath);
+        else if (File.Exists(pnRootUnifiedPath))
+            _pnService.LoadPhotonuclearData(_elementsByZ.Values, pnRootUnifiedPath);
+        else if (Directory.Exists(pnDirPath))
+            _pnService.LoadPhotonuclearData(_elementsByZ.Values, pnDirPath);
 
         // Buildup factors (ANSI/ANS-6.4.3)
         string ebfPath = Path.Combine(appBase, "Data", "ANSI_EBF.csv");

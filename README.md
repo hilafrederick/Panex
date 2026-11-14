@@ -18,7 +18,7 @@ Built with C# (.NET 8) and WinUI 3, Panex brings together **LLNL EPDL (EPICS2025
   - **LLNL EPDL (EPICS2025)** (`Z = 1–100`, up to `100 GeV`), including individual atomic photoelectric subshell curves and absorption edges.
   - **NIST XCOM** (`Z = 1–100`, `1 keV – 100 GeV`), implementing XCOM log-log cubic spline interpolation, threshold-reduced variables for pair/triplet production, and piecewise hybrid photoelectric interpolation.
 - **Photonuclear & Isotopic Contributions**
-  - Incorporates **JENDL-5** photonuclear photoabsorption cross sections across 286 nuclides (`C=0, S=0, X=0`), with per-isotope filtering in plots and data tables.
+  - Incorporates **JENDL-5** photonuclear total photoabsorption cross sections (`MT=3` / `MT=5`) across 286 nuclides (`C=0, S=0, X=0`), with per-isotope filtering in plots and data tables.
 - **Material Builder & Reference Libraries**
   - Create materials from single **Elements** (`100` elements, `Z = 1–100`), **Compounds** (chemical formula parser, e.g., `H2O`, `NaCl`), or **Mixtures** (atom fraction or weight/mass fraction).
   - Load pre-defined materials from **NIST SRD-124 ESTAR** (`117` materials) and **PNNL-15870 Rev. 2** (`411` materials), or manage persistent custom materials under `%LOCALAPPDATA%\Panex\Data\Material_User.json`.
@@ -79,7 +79,7 @@ Bundled nuclear, atomic, and material datasets live under [`Panex/Data/`](Panex/
 | :--- | :--- | :--- |
 | `PA_EPDL_2025/` | Photoatomic cross sections & subshell absorption edges (`Z = 1–100`) | LLNL Evaluated Photon Data Library (EPDL / EPICS2025) |
 | `PA_NIST_XCOM/` | Photon cross sections, thresholds & hybrid grids (`Z = 1–100`) | NIST XCOM v3.1 (M. J. Berger & J. H. Hubbell, NBSIR-87) |
-| `PN_JENDL5/` | Photonuclear photoabsorption cross sections (`286` nuclides, `MT=3`) | JENDL-5 Photonuclear Data File, JAEA Nuclear Data Center |
+| `PN_JENDL5/` | Photonuclear total photoabsorption cross sections (`pn_jendl5_xs.csv`; `286` nuclides, `MT=3` / `MT=5`) | JENDL-5 Photonuclear Data File, JAEA Nuclear Data Center |
 | `ANSI_EBF.csv`, `ANSI_EABF.csv` | G-P buildup factor parameters (`23` elements, `0.015–15.0 MeV`) | ANSI/ANS-6.4.3 Standard |
 | `Material_NIST-ESTAR.json` | Reference elements & compounds (`117` entries) | [NIST SRD-124](https://dx.doi.org/10.18434/T4NC7P) |
 | `Material_PNNL-15870-Rev2.json` | Compendium material compositions (`411` entries) | Detwiler et al., [PNNL-15870 Rev. 2](https://doi.org/10.2172/1782721) (Apr. 2021) |
