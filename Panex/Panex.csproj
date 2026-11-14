@@ -15,6 +15,11 @@
     <WindowsAppSDKSelfContained>false</WindowsAppSDKSelfContained>
     <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
     <Version>1.0.0</Version>
+    <Authors>Frederick C. Hila</Authors>
+    <Company>Department of Science and Technology - Philippine Nuclear Research Institute (DOST-PNRI)</Company>
+    <Product>Panex</Product>
+    <Description>Photon Attenuation &amp; Cross-Section Studio (funded and monitored by DOST-PCIEERD Project No. 1213067)</Description>
+    <Copyright>Copyright 2026 DOST-PNRI</Copyright>
     <PublishProfile>win-$(Platform).pubxml</PublishProfile>
     <UseWinUI>true</UseWinUI>
     <WinUISDKReferences>false</WinUISDKReferences>

@@ -87,9 +87,17 @@ Bundled nuclear, atomic, and material datasets live under [`Panex/Data/`](Panex/
 
 ---
 
+## Funding & Attribution
+
+- **Author / Developer:** Frederick C. Hila (Department of Science and Technology – Philippine Nuclear Research Institute, DOST-PNRI)
+- **Copyright:** Copyright © 2026 Department of Science and Technology – Philippine Nuclear Research Institute (DOST-PNRI)
+- **Funding:** Primarily funded and monitored by the **Department of Science and Technology – Philippine Council for Industry, Energy and Emerging Technology Research and Development (DOST-PCIEERD)** under **Project No. 1213067**.
+
+---
+
 ## License
 
-- **Panex Application Source Code:** Licensed under the **Apache License, Version 2.0** — see [`LICENSE`](LICENSE).
+- **Panex Application Source Code:** Licensed under the **Apache License, Version 2.0** — see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE).
 - **Datasets & Third-Party Libraries:** Bundled reference datasets (`Panex/Data/`) and NuGet dependencies (`CommunityToolkit.Mvvm`, `CommunityToolkit.WinUI`, `Microsoft.Extensions.DependencyInjection`, `ScottPlot.WinUI`, `SkiaSharp`, `HarfBuzzSharp`, `WinUIEx`, `Windows App SDK`) remain governed by their respective original terms, licenses, and citations — see [`NOTICE`](NOTICE).
 
 ---

@@ -10,7 +10,7 @@
 #endif
 
 #ifndef AppPublisher
-  #define AppPublisher "Panex Development"
+  #define AppPublisher "DOST-PNRI"
 #endif
 
 #ifndef AppExeName
@@ -40,7 +40,8 @@ AppName={#AppName}
 AppVersion={#AppVersion}
 AppPublisher={#AppPublisher}
 AppPublisherURL=https://github.com/hilafrederick/Panex
-LicenseFile=..\LICENSE
+AppCopyright=Copyright 2026 DOST-PNRI
+LicenseFile=InstallerLicense.txt
 DefaultDirName={autopf}\{#AppName}
 DefaultGroupName={#AppName}
 OutputDir={#OutputDir}

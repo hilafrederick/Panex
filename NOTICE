@@ -1,5 +1,10 @@
-Panex
-Copyright 2026 hilafrederick (Panex Development)
+Panex - Photon Attenuation & Cross-Section Studio
+Copyright 2026 Department of Science and Technology - Philippine Nuclear Research Institute (DOST-PNRI)
+Author / Developer: Frederick C. Hila
+
+This software was primarily funded and monitored by the Department of Science
+and Technology - Philippine Council for Industry, Energy and Emerging Technology
+Research and Development (DOST-PCIEERD) under Project No. 1213067.
 
 The Apache License, Version 2.0 (see LICENSE) applies to the Panex application
 source code, UI, and project configuration created for this repository.
